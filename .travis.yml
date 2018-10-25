@@ -1,0 +1,15 @@
+sudo: required
+dist: trusty
+before_install:
+- "./scripts/setup.sh"
+script:
+- "./scripts/build.sh"
+deploy:
+  provider: releases
+  api_key:
+    secure: RsVwXpYlUYz0iDSceSPU3br/ZAceE3LZhTI0xe3zborLBTxHdSzPjvmcjWxPwLlzy3x0iDAcx7tLjgME3nT+TPlQSjGrrlzPas3BELmm4z04ilm1GPd88tOyAKLqd1JAyZtPL1Tl5hAxO+bF2mPfBV0zTHljQjcUsJwWbFophAZvCfRZZ65HjRtEXxdx/TFNm0JOdFlV/T1uwfJYR0n3q8t+MbARCDfxNfj1R9o9Ycaj+t3ovdAfnCwm/JuJdQNL2e+jtOr5nAG6ap9eoI6r3FwE6kh++xRnoM2gG820P8jrL/Ab32D1hcISG6GsZ30+z/4hb4i7vWyOp0Hn/pu1XYYtBOkbZPZnWc7bldOlNxxUeDuehppXIRkNW7YX0tR++sP4Ph7xGSnrMlFoO56CGIm92r+Pjg+bPGLjj8VyuuwAE94q8jdcz5a7ifAR1iUeY8hlXLv6uU1/XhOm7I40919+u+YRgsrRsqTBsRPXuRAW+Kk0d9ohCAtXzVRftb8CxTalweEQQRg7E0wCXLdZrhPM4b2hijWCf0H5S99BT9/WjusG2+cZ+/5ViA0gSIuvf5YEwwumV9bvYVaYYCfQRkRH7OhrWDN9kBjiRzpO65a8flqrkQ8Sfw97sBxa0OgPfLWxXKeTmmIz/P9nHvw36DSYeYxUp8EzeSjPJOXkSDg=
+  file_glob: true
+  file: "*/*.pdf"
+  skip_cleanup: true
+  on:
+    tags: true

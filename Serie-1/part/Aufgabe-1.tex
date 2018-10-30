@@ -1,3 +1,41 @@
 \section*{Aufgabe 1}
 
-\subsection*{a)}
+\subsection*{Präfix Notation}
+
+Sei $A$ die Menge der modalen aussagenlogischen Formeln als Zeichenketten in Präfix Notation.
+
+
+\subsubsection*{Basismenge}
+
+Dann sind:
+
+$\bot \in A$
+
+$\top \in A$
+
+$\forall i \in \mathbb{N} X_i \in A$
+
+\subsubsection*{Induktionsregel}
+
+Die Modalitäten $\square$ und $\lozenge$ als Jukter der Stelligkeit 1 zu betrachten.
+
+Sei $J$ ein $n$ Stelliger Junktoren und $f_0, ... , f_{n-1} \in A$  , dass
+
+$J(f_0, ... , f_{n-1}) \in A$
+
+
+\subsection*{Formel als Baum}
+
+Sei $A$ die Menge der modalen aussagenlogischen Formeln in Form eines Baumes.
+
+\subsubsection*{Basismenge}
+
+Die Bäume mit einem Knoten, welche für $i \in \mathbb{N}$ mit $\top, \bot$ oder $X_i$ beschriftet sind, sind in $A$.
+
+\subsubsection*{Induktionsregel}
+
+Die Modalitäten $\square$ und $\lozenge$ als Jukter der Stelligkeit 1 zu betrachten.
+
+Sei $J$ ein $n$ Stelliger Junktor und $f_0, ... , f_{n-1} \in A$, 
+
+dann ist der Baum dessen Wurzel mit $J$ beschriftet ist und dessen Kinder $f_0, ... , f_{n-1}$ sind in $A$.

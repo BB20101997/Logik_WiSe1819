@@ -1,1 +1,19 @@
 \section*{Aufgabe 4}
+
+\subsection*{Syntax}
+
+Für die Junktoren $\bigwedge$ bzw. $\bigvee$ mit unendlicher Stelligkeit und Index i
+schreibe man in lesebarer Notation $\bigvee\limits_{i=0}^\infty \varphi_i$ bzw.
+$\bigwedge\limits_{i=0}^\infty \varphi_i$.
+
+\subsection*{Semantik}
+
+$rec_d: (\mathbb{N}\to {F_{PL}})\times(V_{AL} \to \{0,1\})\times\mathbb{N} \to \{0,1\}, (\varphi,\beta,i) \mapsto 
+\begin{cases}
+d & $, falls $[\![\varphi_i]\!]_\beta = d \\
+rec_d(\varphi,\beta,i+1) &  $, sonst$
+\end{cases}$
+
+$[\![\bigvee\limits_{i=0}^\infty \varphi_i]\!]_\beta := rec_1(\varphi,\beta,0)$
+
+$[\![\bigwedge\limits_{i=0}^\infty \varphi_i]\!]_\beta := rec_0(\varphi,\beta,0)$

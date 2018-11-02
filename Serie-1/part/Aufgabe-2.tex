@@ -1,5 +1,19 @@
 \section*{Aufgabe 2}
 
+Sei $FJ := \{(j,n)| j $ ist n Stelliger Junktor$\}$
+
 \subsection*{1)}
 
+$ size:F_{PL} \to N, x \mapsto \begin{cases}
+	1 & $, falls $ x = \bot \vee x = \top \\
+	1 & $, falls $ \exists i \in \mathbb{N} : x = X_i \\
+	1 + \sum\limits_{i = 0}^{n-1} size(f_i) & $, falls $ \exists (j,n) \in FJ : x = j(f_0, ... , f_{n-1})
+\end{cases} $
+
 \subsection*{2)}
+
+$ depth:F_{PL} \to N, x \mapsto \begin{cases}
+	1 & $, falls $ x = \bot \vee x = \top \\
+	1 & $, falls $ \exists i \in \mathbb{N} : x = X_i \\
+	1 + \max\limits_{i \in \mathbb{N} , i<n} depth(f_i) & $, falls $ \exists (j,n) \in FJ : x = j(f_0, ... , f_{n-1})
+\end{cases} $

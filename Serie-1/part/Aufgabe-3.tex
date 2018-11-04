@@ -1,1 +1,66 @@
 \section*{Aufgabe 3}
+
+\subsection*{Anmerkung}
+Da $ \bigvee (x_1, \ldots , x_n) \equiv x_1 \vee \ldots \vee x_n $ und $\bigwedge(x_1, \ldots , x_n) \equiv x_1 \wedge \ldots \wedge x_n $ kann der Beweis nur mit $\vee $ und $\wedge $ geführt werden. Seien $f_\vee$ und $f_\wedge$ Funktionen die logisches oder und logisches und Anwenden 
+
+\subsection*{Induktionsanfang}
+Sei $ \varphi_1 = \top$ dann und $\beta_1 $ und $\beta_2 $ Variablenbelegungen mit $\beta_1 \leq \beta_2 $ dann gilt $[[\varphi_1 ]]_{\beta_1}=1=  [[\varphi_1 ]]_{\beta_2}$ Damit gilt auch $[\varphi_1 ]]_{\beta_1} \leq  [[\varphi_1 ]]_{\beta_2}$
+
+
+Sei $ \varphi_2 = \bot $ dann und $\beta_1 $ und $\beta_2 $ Variablenbelegungen mit $\beta_1 \leq \beta_2 $ dann gilt $[[\varphi_2 ]]_{\beta_1}=0=  [[\varphi_2 ]]_{\beta_2}$ Damit gilt auch $[\varphi_2 ]]_{\beta_1} \leq  [[\varphi_2 ]]_{\beta_2}$
+
+
+
+Sei $ \varphi_3 = X_i $ dann und $\beta_1 $ und $\beta_2 $ Variablenbelegungen mit $\beta_1 \leq \beta_2 $ dann gilt , da 
+$\beta_1(X_j) \leq \beta_2 (X_j)$ $ \forall j\in N$ , $[[\varphi_3 ]]_{\beta_1}= \beta_1(X_i) \leq \beta_2 (X_i) = [[\varphi_3 ]]_{\beta_2}$
+
+ Damit gilt auch $[\varphi_1 ]]_{\beta_1} \leq  [[\varphi_1 ]]_{\beta_2}$
+ 
+ \subsection*{Induktionsvorraussetzung}
+ Für eine n stellige monotone Aussagenlogische Formel $\varphi $ Soll für zwei  Variablenbelegungen $\beta_1 $ und $\beta_2 $ mit $\beta_1 \leq \beta_2 $ gelten dass $[\varphi ]]_{\beta_1} \leq  [[\varphi ]]_{\beta_2}$
+ 
+ \subsection*{Induktionsschluss}
+ Sei $\varphi$ eine n+1 stellige monotone Aussagenlogische Formel, seien zwei Variablenbelegungen $\beta_1 $ und $\beta_2 $ sodass $\beta_1 \leq \beta_2 $ gilt.
+ 
+ Dann existiert mit $\varphi \prime$ eine n stellige monotone Aussagenlogische Formel sodass gilt:
+ 
+ a)
+ 
+  $\varphi= \varphi \prime \vee X_i$ oder  $\varphi= \varphi \prime \vee \top$ oder  $\varphi= \varphi \prime \vee \bot$ 
+  
+  oder
+  
+ b)
+ 
+  $\varphi= \varphi \prime \wedge X_i$ oder  $\varphi= \varphi \prime \wedge \top$ oder  $\varphi= \varphi \prime \wedge \bot$
+  
+  (Nach der Konstruktion von monotonen aussagenlogischen Formeln gilt dies)
+  
+  Dann gilt für a)
+  
+  $[[\varphi ]]_{\beta_1} = f_\vee (\beta_1 (\varphi), \top) \leq  f_\vee (\beta_2 (\varphi), \top) =  [[\varphi ]]_{\beta_2} $
+  
+  $[[\varphi ]]_{\beta_1} = f_\vee (\beta_1 (\varphi), \bot) \leq  f_\vee (\beta_2 (\varphi), \bot) =  [[\varphi ]]_{\beta_2} $
+  
+  $[[\varphi ]]_{\beta_1} = f_\vee (\beta_1 (\varphi), X_i) \leq  f_\vee (\beta_2 (\varphi), X_i) =  [[\varphi ]]_{\beta_2} $
+  
+   Da $ \beta_2 (\varphi) \leq \beta_2 (\varphi)$
+  
+  sodass entweder$ \beta_2 (\varphi) < \beta_2 (\varphi)$ sodass $0 \vee X_i = X_i \leq 1 = 1 \vee X_i $
+   
+    oder $ \beta_2 (\varphi) = \beta_2 (\varphi)$ sodass $0 \vee X_i = X_i \leq X_i= 0 \vee X_i $ bzw: $1 \vee X_i = 1 \leq 1= 1 \vee X_i $ ,$\top \bot$ äquivalent.
+    
+    
+    Dann gilt für b)
+  
+  $[[\varphi ]]_{\beta_1} = f_\wedge (\beta_1 (\varphi), \top) \leq  f_\wedge (\beta_2 (\varphi), \top) =  [[\varphi ]]_{\beta_2} $
+  
+  $[[\varphi ]]_{\beta_1} = f_\wedge (\beta_1 (\varphi), \bot) \leq  f_\wedge (\beta_2 (\varphi), \bot) =  [[\varphi ]]_{\beta_2} $
+  
+  $[[\varphi ]]_{\beta_1} = f_\wedge (\beta_1 (\varphi), X_i) \leq  f_\wedge (\beta_2 (\varphi), X_i) =  [[\varphi ]]_{\beta_2} $
+  
+   Da $ \beta_2 (\varphi) \leq \beta_2 (\varphi)$
+  
+  sodass entweder$ \beta_2 (\varphi) < \beta_2 (\varphi)$ sodass $0 \wedge X_i = 0 \leq X_i = 1 \wedge X_i $
+   
+    oder $ \beta_2 (\varphi) = \beta_2 (\varphi)$ sodass $0 \wedge X_i = 0 \leq X_i= 0 \wedge X_i $ bzw: $1 \wedge X_i = X_i \leq X_i= 1 \wedge X_i $, $\top \bot$ äquivalent.

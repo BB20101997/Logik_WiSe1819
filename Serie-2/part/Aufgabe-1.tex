@@ -2,18 +2,20 @@
 
 
 % $\varphi = (x_j \wedge x_{n+j}) \vee (\bigvee (x_1 \wedge \neg x_{n+1} , x_i \wedge \neg x_{n+i}) \wedge (x_{n+i+1} \wedge \neg x_i+1))$ 
-$\varphi = \bigwedge_{i=0}^{n-1}((x_i \leftrightarrow x_{n+i}) \vee \bigvee_{j=i+1}^{n-1}( e x_{n+j} \wedge \neg x_{j}))$ \\
+$\varphi = \bigwedge_{i=0}^{n-1}((x_i \rightarrow x_{n+i}) \vee \bigvee_{j=i+1}^{n-1}( x_{n+j} \wedge \neg x_{j}))$ \\
 
 
 
-Da für Variablen die genau n Werte entfernt sind gilt, dass sie beide Summen, wenn sie 1 sind, um genau den selben Wert erhöhen sind sie gleich und damit kleiner gleich. Dies zeigt $(x_i \leftrightarrow x_{n+i})$ .\\
+Beide Summen sind als Binärzahlen interpretierbar, da es egal ist was ein Bit in der 2. Zahl ist wenn das ensprechende Bit in der 1. Zahl 0 ist muss nur der Fall betrachtet werden wenn ein Bit der 1. Zahl den Wert 1 hat. Wenn auch das Bit an derselben stelle in der 2. Zahl 1 ist gilt gleichheit in diesem Wert.\\
+
+Dies soll gezeigt werden durch $(x_i \rightarrow x_{n+i})$ .\\
 
 
-Nun müssen nur noch die Variablen betrachtet werden die nicht in beiden Summen dieselbe Potenz von 2 darstellen, da $2^n-1 = \sum_{i=1}^{n-1}2^i$ gilt, reicht es dass zu jeder Variable in der ersten Summe (ohne entsprechende Variable in der zweiten Summe)  eine Variable mit höherem Index in der 2. Summe  existiert (ohne entsprechende Variable in der ersten Summe).\\
+Nun muss nur noch der Fall betrachtet werden wo in der 1. Zahl ein Bit 1 ist selbiges Bit in der Zweiten Zahl aber null, da $2^n-1 = \sum_{i=1}^{n-1}2^i$ gilt, reicht es ein Bit mit höherem Index in der 2. Zahl  existiert (ohne entsprechendes Bit in der ersten Zahl).\\
 
 Dies zeigt $ \bigvee_{j=i+1}^{n-1}( x_{n+j} \wedge \neg x_{j})$. \\
 
 
 
-Andere Formel: $ \varphi = \neg \bigvee_{i=0}^{n-1}(x_i \wedge \neg x_{n+i} \wedge \bigwedge_{j=i+1}^{n-1} (x_i \wedge x_{n+i}))$ 
-Hier wird nur gesucht ob eine Potenz von 2 in der ersten Summe existiert ohne dass eine enstrechende Potenz oder höhere, die nicht "belegt" ist, in der zweiten Summe existiert.
+Andere Formel: $ \varphi = \neg \bigvee_{i=0}^{n-1}(x_i \wedge \neg x_{n+i} \wedge \bigwedge_{j=i+1}^{n-1} (x_j \wedge x_{n+j}))$ 
+Hier wird nur gesucht ob ein Bit in der ersten Zahl existiert ohne dass ein enstrechendes Bit oder höher, die nicht "belegt" ist, in der zweiten Zahl existiert.

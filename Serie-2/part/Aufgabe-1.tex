@@ -11,7 +11,7 @@ Beide Summen sind als Binärzahlen interpretierbar, da es egal ist was ein Bit i
 Dies soll gezeigt werden durch $(x_i \rightarrow x_{n+i})$ .\\
 
 
-Nun muss nur noch der Fall betrachtet werden wo in der 1. Zahl ein Bit 1 ist selbiges Bit in der Zweiten Zahl aber null, da $2^n-1 = \sum_{i=1}^{n-1}2^i$ gilt, reicht es ein Bit mit höherem Index in der 2. Zahl  existiert (ohne entsprechendes Bit in der ersten Zahl).\\
+Nun muss nur noch der Fall betrachtet werden wo in der 1. Zahl ein Bit 1 ist selbiges Bit in der Zweiten Zahl aber 0, da $2^n-1 = \sum_{i=1}^{n-1}2^i$ gilt, reicht es ein Bit mit höherem Index in der 2. Zahl  existiert (ohne entsprechendes Bit in der ersten Zahl).\\
 
 Dies zeigt $ \bigvee_{j=i+1}^{n-1}( x_{n+j} \wedge \neg x_{j})$. \\
 

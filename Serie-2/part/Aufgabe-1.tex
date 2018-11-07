@@ -11,11 +11,11 @@ Beide Summen sind als Binärzahlen interpretierbar, da es egal ist was ein Bit i
 Dies soll gezeigt werden durch $(x_i \rightarrow x_{n+i})$ .\\
 
 
-Nun muss nur noch der Fall betrachtet werden wo in der 1. Zahl ein Bit 1 ist selbiges Bit in der Zweiten Zahl aber 0, da $2^n-1 = \sum_{i=1}^{n-1}2^i$ gilt, reicht es ein Bit mit höherem Index in der 2. Zahl  existiert (ohne entsprechendes Bit in der ersten Zahl).\\
+Nun muss nur noch der Fall betrachtet werden wo in der 1. Zahl ein Bit 1 ist selbiges Bit in der Zweiten Zahl aber 0, da $2^n-1 = \sum_{i=1}^{n-1}2^i$ gilt, reicht es wenn ein Bit mit höherem Index in der 2. Zahl existiert ,ohne dass ein entsprechendes Bit in der ersten Zahl existiert.\\
 
 Dies zeigt $ \bigvee_{j=i+1}^{n-1}( x_{n+j} \wedge \neg x_{j})$. \\
 
 
 
 Andere Formel: $ \varphi = \neg \bigvee_{i=0}^{n-1}(x_i \wedge \neg x_{n+i} \wedge \bigwedge_{j=i+1}^{n-1} (x_j \wedge x_{n+j}))$ 
-Hier wird nur gesucht ob ein Bit in der ersten Zahl existiert ohne dass ein enstrechendes Bit oder höher, die nicht "belegt" ist, in der zweiten Zahl existiert.
+Hier wird nur gesucht ob ein Bit in der ersten Zahl existiert ohne dass ein enstrechendes Bit oder höher, das nicht 'belegt' ist, in der zweiten Zahl existiert.

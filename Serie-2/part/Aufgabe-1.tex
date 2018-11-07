@@ -2,16 +2,16 @@
 
 
 % $\varphi = (x_j \wedge x_{n+j}) \vee (\bigvee (x_1 \wedge \neg x_{n+1} , x_i \wedge \neg x_{n+i}) \wedge (x_{n+i+1} \wedge \neg x_i+1))$ 
-$\varphi = \bigwedge_{i=0}^{n-1}((x_i \leftrightarrow x_{n+i}) \vee \bigvee_{j=i+1}^{n-1}( x_i \wedge x_{n+j} \wedge \neg x_{n+j}))$ \\
+$\varphi = \bigwedge_{i=0}^{n-1}((x_i \leftrightarrow x_{n+i}) \vee \bigvee_{j=i+1}^{n-1}( x_i \wedge x_{n+j} \wedge \neg x_{j}))$ \\
 
 
 
-Da für Variablen die genau n Werte entfernt sind gilt, dass sie beide Summen, wenn sie 1 sind, um genau den selben Wert erhöhen gilt bei ihnen die Gleichheit der kleiner gleich Relation. Dies zeigt $(x_i \leftrightarrow x_{n+i})$ .\\
+Da für Variablen die genau n Werte entfernt sind gilt, dass sie beide Summen, wenn sie 1 sind, um genau den selben Wert erhöhen sind sie gleich und damit kleiner gleich. Dies zeigt $(x_i \leftrightarrow x_{n+i})$ .\\
 
 
 Nun müssen nur noch die Variablen betrachtet werden die nicht in beiden Summen dieselbe Potenz von 2 darstellen, da $2^n-1 = \sum_{i=1}^{n-1}2^i$ gilt, reicht es dass zu jeder Variable in der ersten Summe (ohne entsprechende Variable in der zweiten Summe)  eine Variable mit höherem Index in der 2. Summe  existiert (ohne entsprechende Variable in der ersten Summe).\\
 
-Dies zeigt $ \bigvee_{j=i+1}^{n-1}( x_i \wedge x_{n+j} \wedge \neg x_{n+j})$. \\
+Dies zeigt $ \bigvee_{j=i+1}^{n-1}( x_i \wedge x_{n+j} \wedge \neg x_{j})$. \\
 
 
 

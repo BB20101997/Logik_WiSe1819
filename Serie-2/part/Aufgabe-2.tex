@@ -1,3 +1,25 @@
-\section*{Aufgabe N}
+\section*{Aufgabe 2}
 
-\subsection*{a)}
+\subsection*{4-Färbbarkeit)}
+
+Sei $G$ ein ungerichteter Graph mit Knotenmenge $V = {0,...,m-1}$ und $n$-elementiger Kantenmenge $E = \lbrace \lbrace i_0,j_0\rbrace, \ldots , \lbrace i_{n-1} , j_{n-1} \rbrace \rbrace$.
+
+$F = \lbrace 0,1,2,3 \rbrace$ ist die Menge der Farben.
+
+\subsubsection*{1)}
+
+Die Variable Menge sei $V_{PL}  = \lbrace X_K^f \mid k \in V \wedge f \in F \rbrace$.
+
+\subsubsection*{2)}
+
+Eine partiele Belegung $\beta$ weißt einem Knoten $m \in M$ eine Farbe $f \in F$ zu wenn $[\![X_m^f]\!]_\beta = 1$ und ist so repräsentiert so eine Belegung in der der Knoten m die Farbe f hat.
+
+\subsubsection*{3)}
+
+$\varphi_G = \bigwedge\limits_{m \in M} (\bigotimes\limits_{f \in F} (X_m^f) )
+\wedge
+\neg \bigvee\limits_{\lbrace i,j \rbrace \in E, f \in F} (X_i^f \wedge X_j^f)$
+
+Der erste Teil der Formel [$\bigwedge\limits_{m \in M} (\bigotimes\limits_{f \in F} (X_m^f) )$] beschreibt das jeder Knoten von G genau eine Farbe hat und der zweite Teil der Formel[$\neg \bigvee\limits_{\lbrace i,j \rbrace \in E, f \in F} (X_i^f \wedge X_j^f)$] beschreibt das durch Kanten Verbundene Knoten nicht die selbe Farbe haben dürfen.
+
+

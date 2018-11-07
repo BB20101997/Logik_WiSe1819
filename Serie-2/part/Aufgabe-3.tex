@@ -1,3 +1,49 @@
-\section*{Aufgabe N}
+\section*{Aufgabe 3}
 
-\subsection*{a)}
+$V = \lbrace Karl, Gabi, Emma, Heinz \rbrace$
+
+$N = \lbrace Zunke, Lange, Meier, Kuhn \rbrace$
+
+$H = \lbrace \textit{Kiel, Saarbrücken, Aachen, München} \rbrace$
+
+$P = \lbrace 1,2,3,4 \rbrace$
+
+\subsection*{1)}
+
+Die Variable Menge sei $V_{PL} = \lbrace X_{(v,n,h)}^p \mid v \in V \wedge n \in N \wedge h \in H \wedge p \in P\rbrace$.
+
+\subsection*{2)}
+
+$\chi = 
+\bigwedge\limits_{n \in N}\bigwedge\limits_{v \in V}\bigwedge\limits_{h \in H}\bigwedge\limits_{p \in P}
+\bigwedge\limits_{n^{\prime } \in N \setminus \{n\}}\bigwedge\limits_{v^{\prime } \in V\setminus \{v\}}\bigwedge\limits_{h^{\prime } \in H\setminus \{h\}}\bigwedge\limits_{p^{\prime } \in P\setminus \{p\}}
+(X_{(v,n,h)}^p \rightarrow \neg  X_{(v^{\prime },n^{\prime },h^{\prime })}^{p^{\prime }})$
+
+\subsection*{3)}
+
+Eine 1-Belegung $\beta$ von $\chi$ über die Variablemenge repräsentiert die Lösung in soweit als dass für $v \in V, n \in N, h \in H, p \in P [\![X_{(v,n,h)}^p]\!]_\beta = 1$ bedeutet das die p-te Person mit Vornamen v heißt den Nachnamen n und die Heimatuniversität h hat.
+
+\subsection*{4)}
+
+$\varphi_0 = \bigvee\limits_{n \in N \setminus \{Heinz\}} \bigvee\limits_{h \in H \setminus \{\textit{Saarbrücken}\}} (X^1_{(Meier,n,h)})$
+
+$\varphi_1 = \bigvee\limits_{h \in H} (\neg X^1_{(Emma,Kuhn,h)})$
+
+$\varphi_2 = \bigvee\limits_{h \in H}\bigvee\limits_{n \in N}\bigvee\limits_{k \in \{2,3\}}
+(
+	X^k_{(Karl,n,h)} \\
+	\wedge 
+	\bigvee\limits_{h^{\prime } \in H}\bigvee\limits_{n^{\prime } \in N}\bigvee\limits_{v^{\prime } \in V}
+	(
+		X_{(v^{\prime },n^{\prime },\textit{München})}^{k+1} \vee
+		X_{(v^{\prime },Lange,h^{\prime })}^{k+1}
+	)\\
+	\wedge
+	\bigvee\limits_{\hat{h} \in H}\bigvee\limits_{\hat{n} \in N}\bigvee\limits_{\hat{v} \in V}
+	(
+		X_{(\hat{v},\hat{n},\textit{München})}^{k-1} \vee
+		X_{(\hat{v},Lange,\hat{h})}^{k-1}
+	)
+)$
+
+$\varphi_3 = \bigvee\limits_{v \in V}\bigvee\limits_{n \in N} X^3_{(v,n,Kiel)}$

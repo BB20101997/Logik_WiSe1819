@@ -1,3 +1,43 @@
-\section*{Aufgabe N}
+\section*{Aufgabe 1}
 
-\subsection*{a)}
+\subsection*{comp 1)}
+
+Sei $\beta$ beliebige Variablenbelegung dann gilt:\\
+
+$[ [ X_0 \wedge \neg X_0 ] ]_\beta = and([[X_0 ]]_\beta , [[\neg X_0]]_\beta)$ Da Semantik von $\wedge$.\\
+$=and([[X_0 ]]_\beta , neg([[ X_0]]_\beta))$ Da Semantik von $\neg$ .\\
+$=0$ Da min 1 Wert 0. \\
+$=[[\bot]]_\beta$ Semantik von $\bot$.\\
+$\Rightarrow  X_0 \wedge \neg X_0 \Dashv \vDash \bot $
+
+\subsection*{comp 2)}
+Sei $\beta$ beliebige Variablenbelegung dann gilt:\\
+
+$[ [ X_0 \vee \neg X_0 ] ]_\beta = or([[X_0 ]]_\beta , [[\neg X_0]]_\beta)$ Da Semantik von $\vee$.\\
+$=or([[X_0 ]]_\beta , neg([[ X_0]]_\beta))$ Da Semantik von $\neg$ .\\
+$=1$ Da min 1 Wert 1. \\
+$=[[\top]]_\beta$ Semantik von $\top$.\\
+$\Rightarrow  X_0 \vee \neg X_0 \Dashv \vDash \top $
+
+
+\subsection*{rev)}
+Eigenschaft, die die booleschen Funktionen and und And miteinander in Beziehung setzt:\\
+$and(And([[X_0]]_\beta, \ldots , [[X_n]]_\beta), [[X_{n+1}]]_\beta)=And([[X_0]]_\beta , \ldots , [[X_{n+1}]]_\beta)$\\
+für alle Variablenbelegungen $\beta$
+
+\subsubsection*{Induktionsanfang}
+Sei $\varphi = \bigwedge ()$ Dann gilt:\\
+$\bigwedge () = 1 $ Nach Vorlesung.\\
+$= \top$ Semantik von $\top$
+
+\subsubsection*{Induktionsvorraussetzung}
+Sei $n \in N $ mit $\bigwedge (X_0, \ldots , X_{n-1}) \Dashv \vDash \varphi $\\
+Mit $\varphi$ der form $\varphi=( \ldots (X_0 \wedge X_1) \wedge X_2 ) \ldots \wedge X_{n-1})$
+
+\subsubsection*{Induktionsschritt} 
+Sei $\bigwedge (X_0, \ldots , X_{n})$, sei $\beta$ Varablenbelegung dann gilt:\\
+$[[\bigwedge (X_0, \ldots , X_{n})]]_\beta = And([[X_0]]_\beta, \ldots , [[X_n]]_\beta)$ Semantik von $\bigwedge$\\
+$= and(And([[X_0]]_\beta, \ldots , [[X_{n-1}]]_\beta ), [[X_n]]_\beta)$ Verbindung Zwischen $And$ und $and$. \\
+$= and([[\varphi]]_\beta, [[X_n]]_beta)$ Nach Induktionsvorraussetzung \\
+$[[\varphi \wedge X_n]]_\beta$\\
+$\Rightarrow \bigwedge (X_0, \ldots , X_{n}) \Dashv \vDash \varphi \wedge X_n $

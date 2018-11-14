@@ -1,3 +1,39 @@
-\section*{Aufgabe N}
+\section*{Aufgabe 2}
 
-\subsection*{a)}
+$[zz. \neg((X_0 \rightarrow X_2) \rightarrow X_3) \wedge X_4 \Dashv \vDash (X_4 \wedge \neg X_3) \wedge (X_0 \rightarrow X_2)]$
+
+$\neg((X_0 \rightarrow X_2) \rightarrow X_3) \wedge X_4$
+
+\begin{tabular}{llc}
+$\Dashv \vDash$ & 
+$\neg(\neg(X_0 \rightarrow X_2) \vee X_3) \wedge X_4$ 
+  & congruence lemma with $(rew \rightarrow)$ applied to \\
+& & $\neg(X_5) \wedge X_4$ with \\
+& & $\{X_5 \mapsto (X_0 \rightarrow X_2) \rightarrow X_3\}$ \\ 
+& & $\{X_5 \mapsto \neg (X_0 \rightarrow X_2) \vee X_3\}$   \\
+%
+$\Dashv \vDash$ &
+$(\neg\neg( X_0 \rightarrow X_2) \wedge \neg X_3) \wedge  X_4$ 
+  & congruence lemma with $(demo)$ applied to \\
+& & $X_5 \wedge  X_4$ with \\
+& & $\{X_5 \mapsto \neg(\neg(X_0 \rightarrow X_2) \vee X_3)\}$ \\ 
+& & $\{X_5 \mapsto (\neg \neg (X_0 \rightarrow X_2) \wedge \neg X_3)\}$ \\
+%
+$\Dashv \vDash$ &
+$(( X_0 \rightarrow X_2) \wedge \neg X_3) \wedge  X_4$ 
+  & congruence lemma with $(done)$ applied to \\
+& & $(X_5 \wedge \neg X_3) \wedge  X_4$ with \\
+& & $\{X_5 \mapsto \neg\neg(X_0 \rightarrow X_2)\}$ \\ 
+& & $\{X_5 \mapsto (X_0 \rightarrow X_2)\}$ \\
+%
+$\Dashv \vDash$ & $(X_0 \rightarrow X_2) \wedge (\neg X_3 \wedge  X_4)$  & $(ass)$\\
+%
+$\Dashv \vDash$ & $(\neg X_3 \wedge  X_4) \wedge (X_0 \rightarrow X_2)$  & $(comm)$\\
+% 
+$\Dashv \vDash$ &
+$(X_4 \wedge \neg X_3) \wedge (X_0 \rightarrow X_2)$ 
+  & congruence lemma with $(comm)$ applied to \\
+& & $(X_5) \wedge (X_0 \rightarrow X_2)$ with \\
+& & $\{X_5 \mapsto \neg X_3 \wedge X_4)\}$ \\ 
+& & $\{X_5 \mapsto X_4 \wedge \neg X_3\}$ \\
+\end{tabular}

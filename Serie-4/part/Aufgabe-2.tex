@@ -1,3 +1,33 @@
-\section*{Aufgabe N}
 
-\subsection*{a)}
+\section*{Aufgabe 2}
+
+\subsection*{Formel in CNF umwandeln)}
+
+$\varphi = ( \neg X_0 \vee X_4 ) \wedge (\neg X_1 \vee (\neg X_3 \wedge X_2))$ Ist in NNF.\\
+
+BaseStep:\\
+
+$ \bigwedge ( \bigvee ( \neg X_0 ) ) , \bigwedge ( \bigvee (\neg X_1 ) ) , \bigwedge ( \bigvee (X_2 ) ) , \bigwedge ( \bigvee (\neg X_3 ) ) , \bigwedge ( \bigvee (X_4 ) )  $\\
+
+Inductive step 1 $X_0 \vee X_4$:\\
+
+$  \bigwedge ( \bigvee ( \neg X_0 , X_4 ) )  , \bigwedge ( \bigvee (\neg X_1 ) ) , \bigwedge ( \bigvee (X_2 ) ) , \bigwedge ( \bigvee (\neg X_3 ) )  $\\
+
+Inductive step 2 $\neg X_3 \wedge X_2$:\\
+
+$ \bigwedge ( \bigvee ( \neg X_0 , X_4 ) ) 
+, \bigwedge ( \bigvee (\neg X_1 ) ) ,
+ \bigwedge ( \bigvee (X_2 ),  \bigvee ( \neg X_3 )) ) ,
+ $
+
+Inductive step 3 $neg X_1 \vee ( \neg X_3 \wedge X_2 )$:\\
+
+$ \bigwedge ( \bigvee ( \neg X_0 , X_4 ) ) 
+, \bigwedge ( \bigvee (\neg X_1, X_2  ) , \bigvee (\neg X_1, \neg X_3  ) ) 
+ $
+
+Inductive step 4 $ ( \neg X_0 \vee X_4 ) \wedge (\neg X_1 \vee (\neg X_3 \wedge X_2))$:\\
+
+$ \bigwedge ( \bigvee ( \neg X_0 , X_4 ) , \bigvee (\neg X_1, X_2  ) , \bigvee (\neg X_1, \neg X_3  ) ) 
+ $
+

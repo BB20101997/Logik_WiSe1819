@@ -1,3 +1,98 @@
-\section*{Aufgabe N}
+\section*{Aufgabe 1}
 
-\subsection*{a)}
+\subsection*{Eine Formel in NNF umwandeln}
+
+$\varphi = \neg ((X_0\wedge\neg X_1) \vee \neg(X_0 \wedge X_1))$
+
+\subsubsection*{1.}
+
+\begin{tabular}{rcl}
+$BNF2NNF(\varphi)$ & $=$ & $BNF2NNF(\neg ((X_0\wedge\neg X_1) \vee \neg(X_0 \wedge X_1)))$ \\
+& $=$ & $NegNNF(BNF2NNF((X_0\wedge\neg X_1) \vee \neg(X_0 \wedge X_1)))$ \\
+& $=$ & $NegNNF(BNF2NNF((X_0\wedge\neg X_1)) \vee BNF2NNF(\neg(X_0 \wedge X_1)))$ \\
+& $=$ & $NegNNF((BNF2NNF(X_0) \wedge BNF2NNF(\neg X_1)) \vee $ \\
+&     & $NegNNF(BNF2NNF(X_0 \wedge X_1)))$ \\
+& $=$ & $NegNNF((X_0 \wedge NegNFF(BNF2NNF(X_1))) \vee $ \\
+&     & $NegNNF(BNF2NNF(X_0) \wedge BNF2NNF(X_1)))$ \\
+& $=$ & $NegNNF((X_0 \wedge NegNFF(X_1)) \vee $ \\
+&     & $NegNNF(X_0 \wedge X_1))$ \\
+& $=$ & $NegNNF((X_0 \wedge \neg(X_1)) \vee $ \\
+&     & $(NegNNF(X_0) \vee NegNNF(X_1)))$ \\
+& $=$ & $NegNNF((X_0 \wedge \neg(X_1)) \vee $ \\
+&     & $(\neg X_0 \vee \neg X_1))$ \\
+& $=$ & $NegNNF(X_0 \wedge \neg X_1) \wedge $ \\
+&     & $NegNNF(\neg X_0 \vee \neg X_1)$ \\
+& $=$ & $(NegNNF(X_0) \vee NegNNF(\neg X_1)) \wedge $ \\
+&     & $(NegNNF(\neg X_0) \wedge NegNNF(\neg X_1))$ \\
+& $=$ & $(\neg X_0 \vee X_1) \wedge (X_0 \wedge X_1)$ \\
+\end{tabular}
+
+\subsubsection*{2.}
+
+\begin{tabular}{rcl}
+$BNF2NNF2(\varphi)$ & $=$ & $BNF2NNF2(\neg ((X_0\wedge\neg X_1) \vee \neg(X_0 \wedge X_1)))$ \\
+& $=$ & $BNF2NNF2\textit{-}neg((X_0\wedge\neg X_1) \vee \neg(X_0 \wedge X_1))$ \\
+& $=$ & $BNF2NNF2\textit{-}neg(X_0\wedge\neg X_1) \wedge BNF2NNF2\textit{-}neg(\neg(X_0 \wedge X_1))$ \\
+& $=$ & $(BNF2NNF2\textit{-}neg(X_0)\wedge BNF2NNF2\textit{-}neg(\neg X_1)) \wedge$ \\
+& & $ BNF2NNF2(X_0 \wedge X_1)$ \\
+& $=$ & $(\neg X_0\wedge  BNF2NNF2(X_1)) \wedge $\\
+&     & $(BNF2NNF2(X_0) \wedge BNF2NNF2(X_1))$ \\
+& $=$ & $(\neg X_0\wedge  X_1) \wedge (X_0 \wedge X_1)$ \\
+\end{tabular}
+
+\pagebreak
+
+\subsection*{Komplexität der Umwandlung in NNF untersuchen}
+\par
+\texttt{
+	LaufBNF2NNF($\varphi$) \\
+	Precondition: $\varphi$ in BNF \\
+	case $\varphi$ of \\
+		$\bot$: return 1 \\
+		$\top$: return 1 \\
+		$X_i$: return 1 \\
+		$\neg \xi$ : return LaufBNF2BNNF($\xi$)+LaufNegNNF(BNF2BNNF($\xi$))+1 \\
+		$\Phi_0 \vee \Phi_1$ : return LaufBNF2NNF($\Phi_0$)+ LaufBNF2NNF($\Phi_1$) +1 \\
+		$\Phi_0 \wedge \Phi_1$ : return LaufBNF2NNF($\Phi_0$)+ LaufBNF2NNF($\Phi_1$) +1\\
+}
+
+
+
+\texttt{
+	LaufNegNNF($\varphi$)\\
+	Precondition: $\varphi$ in NNF \\
+	case $\varphi$ of \\
+		$\bot$: return 1 \\
+		$\top$: return 1 \\
+		$X_i$: return 1 \\
+		$\neg X_i$: return 1 \\
+		$\Phi_0 \vee \Phi_1$ : return LaufBNF2NNF($\Phi_0$)+ LaufBNF2NNF($\Phi_1$) +1 \\
+		$\Phi_0 \wedge \Phi_1$ : return LaufBNF2NNF($\Phi_0$)+ LaufBNF2NNF($\Phi_1$) +1\\
+}
+
+
+
+\texttt{
+	LaufBNF2NNF2($\varphi$) \\
+	Precondition: $\varphi$ in BNF \\
+	case $\varphi$ of \\
+		$\bot$: return 1 \\
+		$\top$: return 1 \\
+		$X_i$: return 1 \\
+		$\neg \xi$ : return LaufBNF2BNNF2($\xi$)+1 \\
+		$\Phi_0 \vee \Phi_1$ : return LaufBNF2NNF2($\Phi_0$)+ LaufBNF2NNF2($\Phi_1$) +1 \\
+		$\Phi_0 \wedge \Phi_1$ : return LaufBNF2NNF2($\Phi_0$)+ LaufBNF2NNF2($\Phi_1$) +1\\
+}
+
+Die Laufzeit von BNF2NNF ist Linear zur Anzahl der Knoten die $\varphi$ als Baum hat, wenn $\varphi$ keine Negationen beinhaltet.
+Wenn $\varphi$ Negationen beinhaltet kann die Laufzeit von BNFNNF Quadratisch zur der Anzahl der Knoten werden.
+
+Die Laufzeit von BNF2NNF2 ist Linear zur Anzahl der Knoten die $\varphi$ als Baum hat.
+
+Sei $K$ die Zahl der Knoten des Baumes der die aussagenlogische Formel repräsentiert.
+Dann gilt:
+
+$O(BNF2NNF) = K^2$ 
+
+$O(BNF2NNF2) = K$ 
+

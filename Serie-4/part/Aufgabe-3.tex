@@ -2,21 +2,40 @@
 
 \subsection*{1)}
 
-\subsubsection*{Induktionsanfang}
-Seien $\varphi , \psi$ $\wedge$-Formeln mit 1 Variablen dann gilt für ein $i \in N $:\\
-$\varphi \Dashv \vDash X_i \Dashv \vDash \psi$ damit gilt $vars(\varphi)=\{ X_i \}=vars(\psi)$\\
+Sein $\varphi$ und $\psi$ $\wedge$-Formeln mit $\varphi \Dashv \vDash \psi$.
 
-\subsubsection*{Vorraussetzung}
+Angenommen $var(\varphi) \neq var(\psi).$
+
+Dann existiert $X_i \in (var(\varphi) \cup var(\psi)) \setminus (var(\varphi) \cap var(\psi))$.
+
+Sei $\beta$ 1-Belegung für $\varphi$ und somit per Vorraussetzung auch 1-Belegung für $\psi$.
+Sei $\beta'(X_j) = \begin{cases}
+	\beta(X_j) &\textit{, für} j \neq i \\
+	0		  &\textit{, für} j = i
+	\end{cases}
+$ 
+
+dann gilt $[\![\varphi]\!]_{\beta'} \neq [\![\psi]\!]_{\beta'}$
+
+da für die Formel die $X_i$ nicht enthält $\beta'$ eine 1-Belegung ist und für die Formel die $X_i$ enthält $\beta'$ keine 1-Belegung ist. 
 
 
+%\subsubsection*{Induktionsanfang}
+%Seien $\varphi , \psi$ $\wedge$-Formeln mit 1 Variablen dann gilt für ein $i \in N $:\\
+%$\varphi \Dashv \vDash X_i \Dashv \vDash \psi$ damit gilt $vars(\varphi)=\{ X_i \}=vars(\psi)$\\
 
-
-
-
-
-
-
-
+%\subsubsection*{Vorraussetzung}
 
 \subsection*{2)}
-$\bot $ darf nicht zugelassen werden
+
+$\top$ trägt nicht zum Wahrheitswert einer $\wedge$-Formel,
+ auch ändert $\top$ nicht der Variablemenge einer $\wedge$-Formel,
+ also kann $\top$ als Basiselement zugelassen werden ohne das 1. geändert werden muss.
+
+$\bot$ sorgt in einer $\wedge$-Formel dass diese nicht erfüllbar wird,
+dies bedeutet das für jede $\wedge$-Formel $\varphi$ welche $\bot$ und eine Variable $X_i$ enthält,
+ $\varphi \Dashv \vDash \bot$  gilt, aber auch $vars(\varphi) \supseteq \{X_i\} \neq \{\} = vars(\bot)$ und somit 1. wiederspricht.
+ 
+Für die Aufnahme von $\bot$ sollte 1. so angepasst werden, 
+	dass für $\varphi$ und $\psi$ welche kein $\bot$ enthalten die ursprüngliche Formel gilt.
+	

@@ -1,6 +1,5 @@
-
 \section*{Aufgabe 2}
-
+%Sven
 \subsection*{Formel in CNF umwandeln)}
 
 $\varphi = ( \neg X_0 \vee X_4 ) \wedge (\neg X_1 \vee (\neg X_3 \wedge X_2))$ Ist in NNF.\\
@@ -17,17 +16,34 @@ Inductive step 2 $\neg X_3 \wedge X_2$:\\
 
 $ \bigwedge ( \bigvee ( \neg X_0 , X_4 ) ) 
 , \bigwedge ( \bigvee (\neg X_1 ) ) ,
- \bigwedge ( \bigvee (X_2 ),  \bigvee ( \neg X_3 )) ) ,
- $
+ \bigwedge ( \bigvee (X_2 ),  \bigvee ( \neg X_3 )) ) 
+ $\\
 
-Inductive step 3 $neg X_1 \vee ( \neg X_3 \wedge X_2 )$:\\
+Inductive step 3 $ \neg X_1 \vee ( \neg X_3 \wedge X_2 )$:\\
 
 $ \bigwedge ( \bigvee ( \neg X_0 , X_4 ) ) 
 , \bigwedge ( \bigvee (\neg X_1, X_2  ) , \bigvee (\neg X_1, \neg X_3  ) ) 
- $
+ $\\
 
 Inductive step 4 $ ( \neg X_0 \vee X_4 ) \wedge (\neg X_1 \vee (\neg X_3 \wedge X_2))$:\\
 
 $ \bigwedge ( \bigvee ( \neg X_0 , X_4 ) , \bigvee (\neg X_1, X_2  ) , \bigvee (\neg X_1, \neg X_3  ) ) 
- $
+ $\\
+ 
+ \subsection*{Färbbarkeit in CNF}
+ 
+$X_1 \not \leftrightarrow X_2 \Dashv \vDash   (X_1 \vee X_2 ) \wedge \neg (X_1 \wedge X_2)$ \\
 
+Dann wird aus 
+ 
+ $\bigwedge_{k<m}( (X_{2i_k} \not \leftrightarrow X_{2j_k}  ) \vee (X_{2i_k +1} \not \leftrightarrow X_{2j_k +1} ) ) $
+ $\Dashv \vDash$
+ 
+$\bigwedge_{k<m} ($ \\
+$ \bigvee ( X_{2i_k}, X_{2j_k},  X_{2i_k +1}, X_{2j_k +1}),$\\
+$ \bigvee ( X_{2i_k}, X_{2j_k}, \neg X_{2i_k +1} ,  \neg X_{2j_k +1} )$\\
+$  \bigvee ( \neg X_{2i_k} ,  \neg X_{2j_k},  X_{2i_k +1}, X_{2j_k +1}),$\\
+$ \bigvee ( \neg X_{2i_k} ,  \neg X_{2j_k}, \neg X_{2i_k +1} ,  \neg X_{2j_k +1} ))$ \\
+Das ist in CNF mit $size(\varphi_G) =16 * |E| \leq 16* |E|$, da jedes Element von $\bigwedge$ einer Kante entspricht, und dieses  Element 16 Variablen beseitzt.
+  
+%  $ \bigwedge_{k<m} ( ((X_{2i_k} \vee X_{2j_k} ) \wedge \neg (X_{2i_k} \wedge X_{2j_k})) \vee((X_{2i_k +1} \vee X_{2j_k +1} ) \wedge \neg(X_{2i_k +1} \wedge X_{2j_k +1})) )$   $( ( X_{2i_k} \wedge \neg (X_{2i_k} \wedge X_{2j_k} ) \vee ( X_{2j_k} \wedge \neg (X_{2i_k} \wedge X_{2j_k})) \vee( ( X_{2i_k +1} \wedge \neg (X_{2i_k +1} \wedge X_{2j_k +1} ) \vee ( X_{2j_k +1 } \wedge \neg (X_{2i_k +1 } \wedge X_{2j_k +1})) $  $( ( X_{2i_k} \wedge \neg (X_{2i_k} \wedge X_{2j_k} ) \vee ( X_{2j_k} \wedge \neg (X_{2i_k} \wedge X_{2j_k}))  $ $( ( X_{2i_k} \wedge  (  \neg  X_{2i_k} \vee  \neg  X_{2j_k} )$ NNF $\bigwedge( \bigvee ( X_{2i_k}, X_{2j_k}), \bigvee ( \neg X_{2i_k} ,  \neg X_{2j_k} ))$

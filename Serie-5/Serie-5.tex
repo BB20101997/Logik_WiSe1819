@@ -6,14 +6,28 @@
 \usepackage{amsfonts}
 \usepackage{amssymb} %% Packet zur verwendung Mathematischer Symbole
 \usepackage{mathtools}
-\usepackage{mathabx} % for the =| symbol
 \usepackage{microtype} %% Sorgt für besseren umgang mit zu lange/kurzen Zeilen
 \usepackage{pdfpages} %% Zum einfügen eines PDf dokuments
+
 \usepackage{listings}
 \lstset{
   basicstyle=\ttfamily,
   mathescape
 }
+
+%\usepackage{mathabx} % for the =| symbol
+% Setup the matha font (from mathabx.sty)
+\DeclareFontFamily{U}{matha}{\hyphenchar\font45}
+\DeclareFontShape{U}{matha}{m}{n}{
+      <5> <6> <7> <8> <9> <10> gen * matha
+      <10.95> matha10 <12> <14.4> <17.28> <20.74> <24.88> matha12
+      }{}
+\DeclareSymbolFont{matha}{U}{matha}{m}{n}
+
+% Define the vDash and Dashv characters from that font (from mathabx.dcl)
+\DeclareMathSymbol{\vDash}{3}{matha}{"28}
+\DeclareMathSymbol{\Dashv}{3}{matha}{"29}
+
 \title{Logik Serie 5}
 \author{Bennet Bleßmann, Sven Korfmann}
 

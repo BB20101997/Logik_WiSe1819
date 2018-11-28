@@ -7,10 +7,69 @@ Sei $\varphi$ eine aussagenlogische Formel und $V = vars(\varphi),X_i \in V, W =
 Sein weiter $\varphi_0 = \varphi\{X_i \mapsto \bot\}$ 
 und $\varphi_1 = \varphi\{X_i \mapsto \top\}$ 
 
-\subsubsection*{Fall: $\varphi$ erfüllbar}
-Sei $\varphi$ erfüllbar mit einer 1-Belegung $\beta$.
-Dann 
+\subsubsection*{1.}
+Sei $\beta$ eine Belegung für $\varphi$.
 
-\subsubsection*{Fall: $\varphi$ nicht erfüllbar}
+\#) Für $j \neq i$ gilt dann $[\![X_j\{X_i \mapsto \top\}]\!]_\beta = [\![X_j]\!]_\beta = [\![X_j\{X_i \mapsto \bot\}]\!]_\beta$%
+
+\hfill
+
+Für $\varphi$ erfüllbar mit einer 1-Belegung $\beta$ gilt:
+
+*) Für $\{X_i \mapsto 0\} \subseteq \beta$ ist dann $\beta$  eine 1-Belegung für 
+$\varphi_0$ da gilt $[\![X_i]\!]_\beta = 0 = [\![\bot]\!]_\beta = [\![X_i\{X_i \mapsto \bot\}]\!]_\beta$, 
+mit \#) folgt dann $1 
+= [\![\varphi]\!]_\beta 
+= [\![\varphi\{X_i \mapsto \bot\}]\!]_\beta 
+= [\![\varphi_0]\!]_\beta$.
+
+\hfill
+
+**) Für $\{X_i \mapsto 1\} \subseteq \beta$ ist dann $\beta$  eine 1-Belegung für 
+$\varphi_1$ da gilt $[\![X_i]\!]_\beta = 1 = [\![\top]\!]_\beta = [\![X_i\{X_i \mapsto \top\}]\!]_\beta$,
+mit \#) folgt dann $1 
+= [\![\varphi]\!]_\beta 
+= [\![\varphi\{X_i \mapsto \top\}]\!]_\beta 
+= [\![\varphi_1]\!]_\beta$.
+
+\hfill
+
+Somit $\varphi_0$ oder $\varphi_1$ erfüllbar.
+
+\hfill
+
+\hrule
+
+\hfill
+
+Für $\varphi$ unerfüllbar und $\beta$ Belegung für $\varphi$ gilt:
+
+$\varphi_0$ unerfüllbar da gilt $[\![X_i]\!]_\beta = 0 = [\![\bot]\!]_\beta = [\![X_i\{X_i \mapsto \bot\}]\!]_\beta$, und mit \#) folgt $0 = [\![\varphi]\!]_\beta = [\![\varphi\{X_i \mapsto \bot\}]\!]_\beta = [\![\varphi_0]\!]_\beta$.
+
+\hfill
+
+$\varphi_1$ unerfüllbar da gilt $[\![X_i]\!]_\beta = 1 = [\![\top]\!]_\beta = [\![X_i\{X_i \mapsto \top\}]\!]_\beta$, und mit \#) folgt $0 = [\![\varphi]\!]_\beta = [\![\varphi\{X_i \mapsto \top\}]\!]_\beta = [\![\varphi_1]\!]_\beta$.
+
+\hfill
+
+Somit weder $\varphi_0$ noch $\varphi_1$ erfüllbar.
+
+\subsubsection*{2.}
+Das aus einer 1-Belegung $\beta$ für $\varphi$ sich ergiebt das $\beta|_W$ eine 1-Belegung für $\varphi_{\beta(X_i)}$ ist Ergibt sich daraus das $\beta$ wie in *) für $\beta(X_i) = 0$ und **) für $\beta(X_i) = 1$ zu sehen ist eine 1-Belegung für $\varphi_{\beta(X_i)}$ ist und das wir $\beta$ auf W einschränken dürfen ergibt sich daraus das $X_i \notin vars(\varphi_{\beta(X_i)})$ gilt.  
+
+\subsubsection*{3.}
+Sei $b \in \{0,1\}$ und $\gamma$ 1-Belegung für $\varphi_b$.
+
+Sei $\beta$ = $\gamma \cup \{X_i \mapsto b\}$.
+
+Für dieses $\beta$ gilt dann \#) wie oben und es gilt 
+
+für b = 0: $[\![X_i]\!]_\beta = 0 = [\![\bot]\!]_\beta = [\![X_i\{X_i \mapsto \bot\}]\!]_\beta$ 
+und somit $1 = [\![\varphi_0]\!]_\beta = [\![\varphi\{X_i \mapsto \bot\}]\!]_\beta = [\![\varphi]\!]_\beta$
+
+sowie für b = 1: $[\![X_i]\!]_\beta = 1 = [\![\top]\!]_\beta = [\![X_i\{X_i \mapsto \top\}]\!]_\beta$
+und somit $1 = [\![\varphi_1]\!]_\beta = [\![\varphi\{X_i \mapsto \top\}]\!]_\beta = [\![\varphi]\!]_\beta$
+
+Also $\beta$ 1-Belegung für $\varphi$.
 
 \subsection*{2)}

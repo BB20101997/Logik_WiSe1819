@@ -23,8 +23,9 @@
       <10.95> matha10 <12> <14.4> <17.28> <20.74> <24.88> matha12
       }{}
 \DeclareSymbolFont{matha}{U}{matha}{m}{n}
-
 % Define the vDash and Dashv characters from that font (from mathabx.dcl)
+% This can ovveride symbols by giving it an existing name
+% \DeclareMathSymbol{\name}{type}{font}{slot}
 \DeclareMathSymbol{\vDash}{3}{matha}{"28}
 \DeclareMathSymbol{\Dashv}{3}{matha}{"29}
 

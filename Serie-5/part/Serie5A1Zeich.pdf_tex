@@ -1,0 +1,108 @@
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'Serie5A1Zeich.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{570.14275401bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,1.43189462)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0.23437112,1.40778176){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.18040594\unitlength}\raggedright \end{minipage}}}%
+    \put(0.23812958,1.41060061){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(x0 ne x1) a (x1 ne x2) a (x2 ne x0)\end{tabular}}}}%
+    \put(0.00241411,1.24428887){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(b ne x1) a (x1 ne x2) a (x2 ne b)\end{tabular}}}}%
+    \put(-0.0001812,1.13153517){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(b ne b) a (b ne x2) a (x2 ne b)\end{tabular}}}}%
+    \put(0.51802979,1.2452285){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(t ne x1) a (x1 ne x2) a (x2 ne t)\end{tabular}}}}%
+    \put(0.24599315,1.1334144){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(b ne t) a (t ne x2) a (x2 ne b)\end{tabular}}}}%
+    \put(0.51641964,1.13811246){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(t ne b) a (b ne x2) a (x2 ne t)\end{tabular}}}}%
+    \put(0.79275744,1.13717287){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(t ne t) a (t ne x2) a (x2 ne t)\end{tabular}}}}%
+    \put(-0.00089274,1.00374762){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(b ne b) a (b ne b) a (b ne b)\end{tabular}}}}%
+    \put(0.05924257,0.95958575){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(b ne b) a (b ne t) a (t ne b)\end{tabular}}}}%
+    \put(0.24246738,1.00186839){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(b ne t) a (t ne b) a (b ne b)\end{tabular}}}}%
+    \put(0.31669691,0.95864612){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(b ne t) a (t ne t) a (t ne b)\end{tabular}}}}%
+    \put(0.51401588,1.00374762){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(t ne b) a (b ne b) a (b ne t)\end{tabular}}}}%
+    \put(0.6070377,0.95770652){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(t ne b) a (b ne t) a (t ne t)\end{tabular}}}}%
+    \put(0.77898712,1.00092878){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(t ne t) a (t ne b) a (b ne t)\end{tabular}}}}%
+    \put(0.86731089,0.96334422){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(t ne t) a (t ne t) a (t ne t)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{Serie5A1Zeich.pdf}}%
+    \put(0.01356176,0.92482002){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.06577301\unitlength}\raggedright 0\end{minipage}}}%
+    \put(0.10846281,0.92482002){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.06577301\unitlength}\raggedright 0\end{minipage}}}%
+    \put(0.25880109,0.92763887){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.06577301\unitlength}\raggedright 0\end{minipage}}}%
+    \put(0.35933982,0.92857848){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.06577301\unitlength}\raggedright 0\end{minipage}}}%
+    \put(0.54068537,0.93233694){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.06577301\unitlength}\raggedright 0\end{minipage}}}%
+    \put(0.64874101,0.93327655){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.06577301\unitlength}\raggedright 0\end{minipage}}}%
+    \put(0.80941504,0.92857848){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.06577301\unitlength}\raggedright 0\end{minipage}}}%
+    \put(0.92498762,0.93139732){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.06577301\unitlength}\raggedright 0\end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{Serie5A1Zeich.pdf}}%
+    \put(0.1679405,0.85208672){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(x0 ne x1) a (x1 ne x2) a (x2 ne x3) a (x3 ne x0)\end{tabular}}}}%
+    \put(0.16182606,0.68859382){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(b ne x1) a (x1 ne x2) a (x2 ne x3) a (x3 ne b)\end{tabular}}}}%
+    \put(0.48405087,0.57114219){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(b ne t) a (t ne x2) a (x2 ne x3) a (x3 ne b)\end{tabular}}}}%
+    \put(0.08223276,0.43301875){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(b ne b) a (b ne b) a (b ne x3) a (x3 ne b)\end{tabular}}}}%
+    \put(0.21945249,0.39731358){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(b ne b) a (b ne t) a (t ne x3) a (x3 ne b)\end{tabular}}}}%
+    \put(0.45058151,0.43959608){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(b ne t) a (t ne b) a (b ne x3) a (x3 ne b)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{Serie5A1Zeich.pdf}}%
+    \put(0.04109257,0.02522612){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.06577301\unitlength}\raggedright 0\end{minipage}}}%
+    \put(0.31170149,0.21690749){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.06577301\unitlength}\raggedright 0\end{minipage}}}%
+    \put(0.48459052,0.122946){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.06577301\unitlength}\raggedright 0\end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{Serie5A1Zeich.pdf}}%
+    \put(0.14394649,0.56550448){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(b ne b) a (b ne x2) a (x2 ne x3) a (x3 ne b)\end{tabular}}}}%
+    \put(0.11114459,0.18628304){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(b ne b) a (b ne b) a (b ne b) a (b ne b)\end{tabular}}}}%
+    \put(0.01442625,0.11487269){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(b ne b) a (b ne b) a (b ne t) a (t ne b)\end{tabular}}}}%
+    \put(0.16700089,0.09287839){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.06577301\unitlength}\raggedright 0\end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{Serie5A1Zeich.pdf}}%
+    \put(0.14404159,0.30937272){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(b ne b) a (b ne t) a (t ne b) a (b ne b)\end{tabular}}}}%
+    \put(0.2332896,0.27836527){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(b ne b) a (b ne t) a (t ne t) a (t ne b)\end{tabular}}}}%
+    \put(0.18109511,0.25449204){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.06577301\unitlength}\raggedright 0\end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{Serie5A1Zeich.pdf}}%
+    \put(0.39860844,0.22950553){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(b ne t) a (t ne b) a (b ne b) a (b ne b)\end{tabular}}}}%
+    \put(0.50480735,0.26802971){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(b ne t) a (t ne b) a (b ne t) a (t ne b)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{Serie5A1Zeich.pdf}}%
+    \put(0.5998811,0.09701987){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{Serie5A1Zeich.pdf}}%
+  \end{picture}%
+\endgroup%

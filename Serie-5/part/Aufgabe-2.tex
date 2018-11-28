@@ -1,0 +1,76 @@
+\section*{Aufgabe 2}
+
+\subsection*{1-Belegungen iterative bestimmen}
+
+\subsubsection*{2)}
+\begin{lstlisting}
+SATSolve2($\varphi$)
+Precondition: $\varphi$ is an arbitrary propositional formula.
+  
+let $\varphi^\prime = \varphi$
+let $\sigma = \{\}$
+  
+if $vars(\varphi^\prime)==\emptyset$
+  if $\varphi^\prime \equiv \bot$
+    return $\bot$
+  else
+    return $\sigma$
+else
+  let $ X_i \in vars(\varphi)$
+  let $\varphi_0 = \varphi\{X_i\mapsto \bot\}$
+  let $\varphi_1 = \varphi\{X_i\mapsto \top\}$
+  if $SAT(\varphi_0)$
+    $\sigma = \sigma \cup \{X_i \mapsto 0\}$  
+    $\varphi^\prime = \varphi_0$	 
+  else	 
+    if $SAT(\varphi_1)$
+      $\sigma = \sigma \cup \{X_i \mapsto 1\}$  
+      $\varphi^\prime = \varphi_1$	 
+    else
+      return $\bot$
+
+/* As $\varphi^\prime$ is known to be satisfiable resulting from
+ * $SAT(\varphi_0)$ or $SAT(\varphi_1)$ we don't need the checks for
+ * 1) $\varphi^\prime \equiv \bot$
+ * 2) $SAT(\varphi_1)$
+ * anymore as 1) will allways be false and 2) always be true
+ * therefor the iteration can be siplified as follows
+ */
+ 
+$\pagebreak$
+
+while($vars(\varphi^\prime) != \emptyset$)
+	let $ X_i \in vars(\varphi)$
+	let $\varphi_0 = \varphi\{X_i\mapsto \bot\}$
+	let $\varphi_1 = \varphi\{X_i\mapsto \top\}$
+	if $SAT(\varphi_0)$
+		$\sigma = \sigma \cup \{X_i \mapsto 0\}$  
+		$\varphi^\prime = \varphi_0$	 
+	else	 
+		$\sigma = \sigma \cup \{X_i \mapsto 1\}$  
+		$\varphi^\prime = \varphi_1$
+return $\sigma$
+  		
+Postcondition: 
+  	return is a 1-assignment for $\varphi$ if $\varphi$ is satisfiable; 
+  	return = $\bot$ if $\varphi$ is unsatisfiable
+\end{lstlisting}
+
+
+\subsubsection*{3)}
+
+Angenommen jeder SAT Aufruf hat Konstante Laufzeit, dann ist die Laufzeit des Algorithmus in O(size($\varphi$)), da wir in jeder iteration (Schleifen Körper zwischen ``start:`` und ``goto start``) eine Variable von $\varphi^\prime$ eliminieren. und somit sich $size(\varphi^\prime)$ in jeder iteration um eins verringert und vor der ersten iteration $\varphi^\prime = \varphi$ und somit auch $size(\varphi^\prime)$ = $size(\varphi)$  gilt.
+
+\subsection*{4)}
+
+Wenn $\varphi$ erfüllbar ist wird SAT $size(\varphi)$ oder $size(\varphi)+1$ mal aufgerufen, ein oder zwei mal für die erste Variable und ein mal für alle übrigen Varablen.
+
+Wenn $\varphi$ nicht erfüllbar ist wird SAT nie aufgerufen sollte $\varphi$ keine Variablen enthalt, sonst zweimal.
+
+\subsection*{5)}
+3) ist übertragbar da die originale SATSolver2 Prozedur statt bei jeder Iteration einen Variable zu eliminieren bei jeder rekursion eine Variable eliminiert.
+
+4) Für erfüllbare $\varphi$ wird SAT zwischen $size(\varphi)$ und $2 \cdot size(\varphi)$  mal aufgerufen.
+
+Für nicht erfüllbare $\varphi$ wird SAT nie oder zwei mal Aufgerufen.
+

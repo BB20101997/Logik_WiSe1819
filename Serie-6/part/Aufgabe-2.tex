@@ -1,0 +1,25 @@
+\section*{Aufgabe 2}
+Resolutionsbeweis für die Unerfüllbarkeit von:
+
+$\bigwedge\!\bigvee \{\{X_2,X_1,X_5\}, \{\neg X_4,X_2,\neg X_3\}, \{\neg X_5,\neg X_2\}, \{X_4,X_5,\neg X_2\}, \{\neg X_4,X_1\}, \\
+\{X_2,\neg X_5,\neg X_3\}, \{X_3,X_1\},\{\neg X_1\}\}$
+
+\begin{lstlisting}
+ 1  $\{X_2,X_1,X_5\}$	           premise
+ 2  $\{\neg X_4,X_2,\neg X_3\}$               premise
+ 3  $\{\neg X_5,\neg X_2\}$               premise
+ 4  $\{X_4,X_5,\neg X_2\}$               premise
+ 5  $\{\neg X_4,X_1\}$               premise
+ 6  $\{X_2,\neg X_5,\neg X_3\}$               premise
+ 7  $\{X_3,X_1\}$               premise
+ 8  $\{\neg X_1\}$               premise
+ 9  $\{X_3\}$               (res) with $X_1$ from $ $ 7 and $ $ 8
+10  $\{\neg X_4\}$               (res) with $X_1$ from $ $ 5 and $ $ 9
+11  $\{X_2, \neg X_5\}$               (res) with $X_3$ from $ $  6 and $ $ 9
+12  $\{\neg X_5\}$               (res) with $X_2$ from $ $  3 and 11
+13  $\{X_2,X_1\}$               (res) with $X_5$ from $ $ 1 and 12
+14  $\{X_2\}$               (res) with $X_1$ from $ $ 8 and 13
+15  $\{X_4,X_5\}$               (res) with $X_2$ from $ $ 4 and 14
+16  $\{X_5\}$               (res) with $X_4$ from 10 and 15
+17  $\{\}$               (res) with $X_5$ from 12 and 15
+\end{lstlisting}

@@ -1,15 +1,91 @@
 \section*{Aufgabe 2}
 
-$M|_{X_2} = \{\{\neg X_5\}, \{X_4, X_5\}, \{\neg X_4, X_1\}, \{X_3, X_1\}, \{\neg X_1\}\}$
+\subsection*{1.}
 
-$M|_{\neg X_2} = \{\{X_1,X_2\}, \{\neg X_4, \neg X_3\}, \{\neg X_4, X_1\}, \{\neg X_4, X_1 \}, \{ \neg X_5\, \neg X_3\}, \{X_3, X_1\}, \{\neg X_1\}\}$
-
-%TODO simplify
-
-$M^\prime = \{ \\
-\{\neg X_5,X_1,X_2\}, \{\neg X_5,\neg X_4, \neg X_3\}, \{\neg X_5,\neg X_4, X_1\}, \{\neg X_5,\neg X_4, X_1 \}, \{ \neg X_5, \neg X_3\},\\ \{\neg X_5,X_3, X_1\}, \{\neg X_5,\neg X_1\} \\
-\{X_4, X_5,X_1,X_2\}, \{X_4, X_5,\neg X_4, \neg X_3\},\\ \{X_4, X_5,\neg X_4, X_1\}, \{X_4, X_5,\neg X_4, X_1 \}, \{X_4, X_5, \neg X_5\, \neg X_3\},\\ \{X_4, X_5,X_3, X_1\}, \{X_4, X_5,\neg X_1\} \\
-\{\neg X_4, X_1,X_1,X_2\}, \{\neg X_4, X_1, \neg X_3\}, \{ X_1,\neg X_4, X_1\}, \{\neg X_4, X_1 \},\\ \{\neg X_4, X_1, \neg X_5\, \neg X_3\}, \{\neg X_4,X_3, X_1\}, \{\neg X_4, X_1,\neg X_1\} \\
-\{X_3, X_1,X_2\}, \{X_3, X_1,\neg X_4, \neg X_3\},\\ \{X_3,\neg X_4, X_1\}, \{X_3, X_1,\neg X_4, X_1 \}, \{X_3, X_1, \neg X_5\, \neg X_3\}, \\ \{X_3, X_1\}, \{X_3, X_1,\neg X_1\} \\
-\{\neg X_1,X_1,X_2\}, \{\neg X_1,\neg X_4, \neg X_3\}, \{\neg X_1,\neg X_4, X_1 \}, \{\neg X_1, \neg X_5\, \neg X_3\},\\ \{\neg X_1,X_3, X_1\}, \{\neg X_1\}
+$M|_{X_2} = \{
+\{\neg X_5\},
+\{X_4, X_5\},
+\{\neg X_4, X_1\},
+\{X_3, X_1\},
+\{\neg X_1\}
 \}$
+
+$M|_{\neg X_2} = \{
+\{X_1, X_5\},
+\{\neg X_4, \neg X_3\},
+\{\neg X_4, X_1\},
+\{ \neg X_5\, \neg X_3\},
+\{X_3, X_1\},
+\{\neg X_1\}
+\}$
+
+$M' = \{\\%
+\{\neg X_5\, X_1, X_5\},
+\{\neg X_5\, \neg X_4, \neg X_3\},
+\{\neg X_5\, \neg X_4, X_1\},
+\{\neg X_5\, \neg X_3\},
+\{\neg X_5\, X_3, X_1\}\\,
+\{\neg X_5\, \neg X_1\},
+\\%
+\{X_4, X_5, X_1\},
+\{X_4, X_5, \neg X_4, \neg X_3\},
+\{X_4, X_5, \neg X_4, X_1\},
+\{X_4, X_5, \neg X_5, \neg X_3\}\\,
+\{X_4, X_5, X_3, X_1\},
+\{X_4, X_5, \neg X_1\},
+\\%
+\{\neg X_4, X_1, X_5\},
+\{\neg X_4, X_1, \neg X_3\},
+\{\neg X_4, X_1\},
+\{\neg X_4, X_1, \neg X_5\, \neg X_3\},
+\{\neg X_4, X_1, X_3\}\\,
+\{\neg X_4, X_1, \neg X_1\},
+\\%
+\{X_3, X_1, X_5\},
+\{X_3, X_1, \neg X_4, \neg X_3\},
+\{X_3, X_1, \neg X_4\},
+\{X_3, X_1, \neg X_5\, \neg X_3\},
+\{X_3, X_1\}\\,
+\{X_3, X_1, \neg X_1\},
+\\%
+\{\neg X_1, X_1, X_5\},
+\{\neg X_1, \neg X_4, \neg X_3\},
+\{\neg X_1, \neg X_4, X_1\},
+\{\neg X_1, \neg X_5\, \neg X_3\},
+\{\neg X_1, X_3, X_1\},
+\{\neg X_1\}
+\\%
+\}$
+
+\subsection*{2.}
+\begin{lstlisting}
+  1 $\{\neg X_1\}$         premis 
+  2 $\{X_3,X_1\}$         premis  
+  3 $\{X_3\}$         (res) with $X_1$ from 1 and 2
+  4 $\{\neg X_5, \neg X_3\}$         premis
+  5 $\{\neg X_5\}$         (res) with $X_3$ from 3 and 4
+  6 $\{\neg X_4, X_1\}$         premis
+  7 $\{\neg X_4\}$         (res) with $X_1$ from 1 and 6
+  8 $\{X_4,X_5,X_1\}$         premis
+  9 $\{X_5,X_1\}$         (res) with $X_4$ from 7 and 8
+ 10 $\{X_1\}$         (res) with $X_5$ from 5 and 9
+ 11 $\{\}$         (res) with $X_1$ from 1 and 10
+\end{lstlisting}
+
+
+\subsection*{3.}
+
+$M'' = \{\\
+\{X_1, X_5, \neg X_5\}, \{X_1, X_5, X_4\},\\
+\{\neg X_4, \neg X_3, \neg X_5\}, \{\neg X_4, \neg X_3, X_5, X_4\},\\
+\{\neg X_5, \neg X_3\}, \{\neg X_5, \neg X_3\, X_5, X_4\}, \\
+\{\neg X_4, X_1\}, \{X_3,X_1\} , \{\neg X_1\}\\
+\}$
+
+\subsection*{4.}
+
+$M^{\prime\prime} \subset M^{\prime}$
+
+\subsection*{5.}
+
+Resolution identisch zu der für $M^\prime$ in 2. da alle verwendeten premisses auch in $M^{\prime\prime}$ .

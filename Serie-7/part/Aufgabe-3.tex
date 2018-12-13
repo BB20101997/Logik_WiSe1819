@@ -15,22 +15,20 @@ Yes it can be expanded to $Z_5$
 
 \subsubsection*{Proof} 
 Propositional formulas for equations:
-$X_{i_0} + \ldots + X_{i_n} = 5$ zu \\
-$\bigvee_{p<n} \bigvee_{j<n;  j\neq p} \bigvee_{k<n;  k\neq p,j} \bigvee_{l<n;  l\neq p,j,k} \bigvee_{m<n;  m\neq p,j,k,l} (X_{i_p} \wedge X_{i_j} \wedge X_{j_k} \wedge X_{i_l} \wedge X_{i_m}   \bigwedge_{o<n;  o\neq p,j,k,l,m} \neg X_{p_o} )$\\
 
-$X_{i_0} + \ldots + X_{i_n} = 4$ zu \\
+$X_{i_0} + \ldots + X_{i_n} = 4$ to \\
 $\bigvee_{p<n} \bigvee_{j<n;  j\neq p} \bigvee_{k<n;  k\neq p,j} \bigvee_{l<n;  l\neq p,j,k}  (X_{i_p} \wedge X_{i_j} \wedge X_{i_k} \wedge X_{i_l} \bigwedge_{o<n;  o\neq p,j,k,l} \neg X_{p_o} )$\\
 
-$X_{i_0} + \ldots + X_{i_n} = 3$ zu \\
+$X_{i_0} + \ldots + X_{i_n} = 3$ to \\
 $\bigvee_{p<n} \bigvee_{j<n;  j\neq p} \bigvee_{k<n;  k\neq p,j} (X_{i_p} \wedge X_{i_j} \wedge X_{i_k} \bigwedge_{o<n;  o\neq p,j,k} \neg X_{i_o} )$\\
 
-$X_{i_0} + \ldots + X_{i_n} = 2$ zu \\
+$X_{i_0} + \ldots + X_{i_n} = 2$ to \\
 $\bigvee_{p<n} \bigvee_{j<n;  j\neq p}  (X_{i_p} \wedge X_{i_j} \bigwedge_{o<n;  o\neq p,j} \neg X_{i_o} )$\\
 
-$X_{i_0} + \ldots + X_{i_n} =1$ zu \\
+$X_{i_0} + \ldots + X_{i_n} =1$ to \\
 $\bigvee_{p<n} (X_{i_p} \bigwedge_{o<n;  o\neq i} \neg X_{i_o} )$\\
 
-$X_{i_0} + \ldots + X_{i_n} = 0$ zu \\
+$X_{i_0} + \ldots + X_{i_n} = 0$ to \\
 $ \bigwedge_{o<n} \neg X_{i_o} )$\\
 
-Let $Z'$ be infinite equation system on $Z_5$, then let $\Phi$ be the set of every set of equations as propositional formulars. $Z'$ is true when $Sat\Phi$ is true because 
+Let $Z'$ be infinite equation system on $Z_5$, then let $\Phi$ be the set of every set of equations as propositional formulars. $Z'$ is true when $Sat\Phi$ is true because a assingment $\beta$ that equates to true on $\Phi$ is a assingment on all equations of $Z'$ to solve the equation system.

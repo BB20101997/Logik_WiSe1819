@@ -1,3 +1,72 @@
-\section*{Aufgabe N}
+\section*{Aufgabe 2}
 
-\subsection*{a)}
+\subsection*{Monoiden}
+\subsubsection*{Monoid 1)}
+
+$A_1 = \{ 0 , 1 \}$\\
+$one^{A_1} = 1$ $mult^{A_1}(a,b)= $ a*b (Multiplikation auf natürlichen zahlen)\\
+
+\subsubsection*{Monoid 2)}
+
+$A_2 = \{ 1 , 2 \}$\\
+$one^{A_2} = 1$ $mult^{A_2}(a,b)= a+b rem 2 $ (Addition auf natürlichen zahlen und Rest von ganzzahliger division)\\
+
+\subsubsection*{Monoid 3)}
+
+$A_3 = \mathbb{N}$\\
+$one^{A_2} = 0$ $mult^{A_2}(a,b)= a+b $ (Addition auf natürlichen zahlen)\\
+
+\subsection*{Wertbestimmung}
+\subsubsection*{Monoid 1)}
+
+$[[mult(mult(x_0 ,x_0), mult(one,x_0 )) ]]^{A_1}_{\beta}$\\
+
+$= mult^{A_1}([[mult(x_0 ,x_0)]]^{A_1}_{\beta}, [[mult(one,x_0 ) ]]^{A_1}_{\beta})$\\
+
+$= mult^{A_1}(
+mult^{A_1}(
+[[x_0 ]]^{A_1}_{\beta} , [[x_0 ]]^{A_1}_{\beta}
+), mult^{A_1}( 
+[[one]]^{A_1}_{\beta} , [[x_0]]^{A_1}_{\beta} )) $\\
+
+$= mult^{A_1}(mult^{A_1}(1 , 1), mult^{A_1}( 1 , 1 )) $\\
+
+$= mult^{A_1}(1, 1)$\\
+
+$= 1$\\
+
+\subsubsection*{Monoid 2)}
+
+$[[mult(mult(x_0 ,x_0), mult(one,x_0 )) ]]^{A_2}_{\beta}$\\
+
+$= mult^{A_2}([[mult(x_0 ,x_0)]]^{A_2}_{\beta}, [[mult(one,x_0 ) ]]^{A_2}_{\beta})$\\
+
+$= mult^{A_2}(
+mult^{A_2}(
+[[x_0 ]]^{A_2}_{\beta} , [[x_0 ]]^{A_2}_{\beta}
+), mult^{A_2}( 
+[[one]]^{A_2}_{\beta} , [[x_0]]^{A_2}_{\beta} )) $\\
+
+$= mult^{A_2}(mult^{A_2}(1 , 1), mult^{A_2}( 1 , 1 )) $\\
+
+$= mult^{A_2}(2, 2)$\\
+
+$= 1$\\
+
+\subsubsection*{Monoid 3)}
+
+$[[mult(mult(x_0 ,x_0), mult(one,x_0 )) ]]^{A_3}_{\beta}$\\
+
+$= mult^{A_3}([[mult(x_0 ,x_0)]]^{A_3}_{\beta}, [[mult(one,x_0 ) ]]^{A_3}_{\beta})$\\
+
+$= mult^{A_3}(
+mult^{A_3}(
+[[x_0 ]]^{A_3}_{\beta} , [[x_0 ]]^{A_3}_{\beta}
+), mult^{A_3}( 
+[[one]]^{A_3}_{\beta} , [[x_0]]^{A_3}_{\beta} )) $\\
+
+$= mult^{A_3}(mult^{A_3}(1 , 1), mult^{A_3}( 0 , 1 )) $\\
+
+$= mult^{A_3}(2, 1)$\\
+
+$= 3$\\

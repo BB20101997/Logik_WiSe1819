@@ -2,6 +2,23 @@
 
 \subsection*{1.}
 
+% zz \mathcal{GE} \vDash \varphi
+
+Es ist zu zeigen dass für alle $\beta$ G-Belegungen gilt $ \mathcal{G},\beta \vDash \varphi$.
+
+Also es ist zu zeigen das $\mathcal{G} \vDash \varphi$ gilt.
+
+$\varphi^\mathcal{G} = \forall x_0 right^\mathcal{G}(up^\mathcal{G}(x_0)) \doteq up^\mathcal{G}(right^\mathcal{G}(x_0))$
+
+$ = \forall \langle l,r \rangle right^\mathcal{G}(up^\mathcal{G}(\langle l,r \rangle)) \doteq up^\mathcal{G}(right^\mathcal{G}(\langle l,r \rangle))$
+
+
+$ = \forall \langle l,r \rangle right^\mathcal{G}(\langle l,r+1 \rangle) \doteq up^\mathcal{G}(\langle l+1,r \rangle)$
+
+$ = \forall \langle l,r \rangle \langle l+1,r+1 \rangle \doteq \langle l+1,r+1 \rangle$
+
+$= \forall \langle l,r \rangle \top = \top$
+
 
 
 \subsection*{3.}

@@ -1,3 +1,20 @@
-\section*{Aufgabe N}
+\section*{Aufgabe 2}
 
-\subsection*{a)}
+\subsection*{Variablen in Termen Finden)}
+
+\subsubsection*{Inductionsanfang}
+$vars(x_i)=\{ x_i\} $ für alle $i \in \mathbb{N}$
+
+
+\subsubsection*{Induktionschritt}
+$vars(f(t_0, \ldots , t_{n-1}))= \cup_{i=0}^{n} vars(t_i)$
+
+\subsection*{Quantorenrang definieren}
+\subsubsection*{Inductionsanfang}
+$qrank(x_i)=0$\\
+$qrank(f(t_0, \ldots ,t_{n-1} ))=0$\\
+$qrank(R(t_0, \ldots , t_{n-1})=0$\\
+\subsubsection*{Induktionschritt}
+$qrank(C(\varphi_{0}, \ldots , \varphi_{n-1}))= max\{ qrank(\varphi_{0}) , \ldots , qrank(varphi_{n-1}) \}$\\
+$qrank(Qx_i (\varphi))= 1+ qrank(\varphi)$
+

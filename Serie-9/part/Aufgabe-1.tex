@@ -1,3 +1,22 @@
-\section*{Aufgabe N}
+\section*{Aufgabe 1}
 
-\subsection*{a)}
+\subsection*{1)}
+Signatur $S=\{c, right//1, up//1, R_0/1, R_1/1, R_2/1 \}$\\
+Formelr:\\
+
+
+$\varphi =\forall x_0 up(right(x_0)) \doteq right(up(x_0))$
+$\wedge$ 
+$ \forall x_0 \dot{\bigvee}_{k\leq 2} R_k(x_0)$ \\
+$\wedge  R_0(c)  \wedge$\\
+$ \forall x_0 \bigwedge_{k \leq 2} (R_k (x_0) \rightarrow \bigvee \{ R_l(right(x_0)): c_{k}^{1} = c_{l}^{3} \} ) $\\
+$\wedge \forall x_0 \bigwedge_{k \leq 2} (R_k (x_0) \rightarrow \bigvee \{ R_l(up(x_0)): c_{k}^{2} = c_{l}^{0} \} ) $ 
+
+\subsection*{2)}
+Nehme nur den dritten Domino und lege nur einen. Struktur \texttt{A}\\
+$A = \{0\}$\\
+$c^A =  0$\\
+$right^A(0)=0$\\
+$up^A(0)=0$\\
+$R_k^A = \emptyset$ für $k\leq 1$\\
+$R_2^A = A$ 

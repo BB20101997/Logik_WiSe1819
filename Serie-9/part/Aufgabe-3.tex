@@ -1,3 +1,115 @@
-\section*{Aufgabe N}
+\section*{Aufgabe 3}
 
-\subsection*{a)}
+\subsection*{1.}
+
+\subsubsection*{Beweis für Gleichheit $(t_0 \dot= t_1)$}
+
+Seien $t_0$ und $t_1$ Terme, weiter sei $\varphi = t_0 \dot= t_1$.
+
+Sein $\beta_0$ und $\beta_1$ $\mathcal{A}$-Belegungen mit $\beta_0|_{fvars(\varphi)}$ = $\beta_1|_{fravs(\varphi)}$.
+
+\hfill
+
+Wir schließen
+
+$\beta_0|_{fvars(t_i)} = \beta_1|_{fvars(t_i)},$ für $i \in \{0,1\}$ 
+
+da $fvars(t_i) \subseteq fvars(\varphi)$ nach der Definition von fvars.
+
+\hfill
+
+Nach dem ersten Lemma der Section "Proof preperation" der Wiki Seite " Coincidence lemma in first-order logik",
+schließen wir
+
+$[\![ t_i ]\!]_{\beta_0}^\mathcal{A} = [\![ t_i ]\!]_{\beta_1}^\mathcal{A}$ für alle $i \in \{0,1\}$ (*)
+
+\hfill
+
+Wir können nun Folgern
+
+$\mathcal{A},\beta_0 \vDash \varphi$ 
+
+genau dann wenn $[\![ t_0 ]\!]_{\beta_0}^\mathcal{A} = [\![ t_1 ]\!]_{\beta_0}^\mathcal{A}$  wegen der definition von $\varphi$ und der semantik
+
+genau dann wenn $[\![ t_0 ]\!]_{\beta_1}^\mathcal{A} = [\![ t_1 ]\!]_{\beta_1}^\mathcal{A}$ (*)
+
+genau dann wenn $\mathcal{A},\beta_1 \vDash \varphi$ wegen der definition von $\varphi$ und der semantik
+
+\subsubsection*{Beweis für Junktoren $(C(\varphi_0,...,\varphi_{n-1}))$ }
+
+Sei $t_i$ ein Term für alle $i \in \{0,...,n-1\}$ und $C$ ein n-Stelliger Junktor.
+
+Sei $\varphi = C(t_0,...,t_{n-1})$.
+
+Sein $\beta_0$ und $\beta_1$ $\mathcal{A}$-Belegungen mit $\beta_0|_{fvars(\varphi)} = \beta_1|_{fravs(\varphi)}$.
+
+\hfill
+
+Wir schließen
+
+ $\beta_0|_{fvars(t_i)} = \beta_1|_{fvars(t_i)}$ für alle $i \in \{0,...,n-1\}$ 
+ 
+ da $fvars(t_i) \subseteq fvars(\varphi)$ nach der Definition von fvars.
+ 
+\hfill
+
+Nach dem ersten Lemma der Section "Proof preperation" der Wiki Seite " Coincidence lemma in first-order logik",
+schließen wir 
+
+$[\![ t_i ]\!]_{\beta_0}^\mathcal{A} = [\![ t_i ]\!]_{\beta_1}^\mathcal{A}$ für $i \in \{0,n-1\}$(*)
+
+\hfill
+
+Wir können nun Folgern
+
+$[\![\varphi]\!]_{\beta_0}^\mathcal{A}$ 
+
+=  $C^{\mathcal{A}}([\![ t_0 ]\!]_{\beta_0}^\mathcal{A},...,[\![ t_{n-1} ]\!]_{\beta_0}^\mathcal{A})$ wegen der definition von $\varphi$ und der semantik
+
+=  $C^{\mathcal{A}}([\![ t_0 ]\!]_{\beta_1}^\mathcal{A},...,[\![ t_{n-1} ]\!]_{\beta_1}^\mathcal{A})$ (*)
+
+= $[\![\varphi]\!]_{\beta_1}^\mathcal{A}$ wegen der definition von $\varphi$ und der semantik
+
+
+%zz \forall \beta_0 \beta_1 with [| \beta_0|]|_fvars(\varphi)
+
+
+\subsection*{2.}
+
+\subsubsection*{Definition für $fvars$ auf Formel Mengen}
+
+Sei $\Phi$ eine Menge von Formeln.
+
+Dann sei $fvars(\Phi) = \bigcup\limits_{\varphi \in \Phi} fvars(\varphi)$.
+
+\subsection*{Koinzidenzlemma für Mengen von Formeln}
+
+Sei $\Phi$ eine Menge von Formeln.
+
+Sein $\beta_0$ und $\beta_1$ $\mathcal{A}$-Belegungen mit $\beta_0|_{fvars(\Phi)} = \beta_1|_{fvars(\Phi)}$.
+
+\hfill
+
+Nach der definition von fvars auf Formel Mengen gilt
+
+für alle $\varphi \in \Phi: \beta_0|_{fvars(\varphi)} = \beta_1|_{fvars(\varphi)}$,
+
+da $fvars(\varphi) \subseteq fvars(\Phi)$.
+
+\hfill
+
+Nach dem ersten Lemma der Section "Proof preperation" der Wiki Seite " Coincidence lemma in first-order logik",
+schließen wir 
+
+$[\![ \varphi ]\!]_{\beta_0}^\mathcal{A} = [\![ \varphi ]\!]_{\beta_1}^\mathcal{A}$ für alle $\varphi \in \Phi$(*)
+
+Wir können nun Folgern
+
+$\mathcal{A},\beta_0 \vDash \Phi$
+
+genau dann wenn $[\![ \varphi ]\!]_{\beta_0}^\mathcal{A} = 1$ für alle $\varphi \in \Phi$ wegen der Semantik
+
+genau dann wenn $[\![ \varphi ]\!]_{\beta_1}^\mathcal{A} = 1$ für alle $\varphi \in \Phi$ (*)
+
+genau dann wenn $\mathcal{A},\beta_1 \vDash \Phi$ wegen der Semantik
+

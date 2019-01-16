@@ -1,3 +1,49 @@
-\section*{Aufgabe N}
+\section*{Aufgabe 2}
 
-\subsection*{a)}
+\subsection*{\mbox{Normalform ohne mehrfach quantifizierte Variablen erstellen}}
+Undup entfernt alle dupplikate indem es alle Variabeln durch neue ersetzt.
+
+$undup(\varphi) := \varphi^\prime $, wobei $ (\varphi^\prime,ignored) = undup(\varphi,\max\limits{\{ i \in \mathbb{N} | x_i \in vars(\varphi)\}})$
+
+Induktive definition für $undup(\varphi,j)$.
+
+\subsubsection*{Basis Fälle}
+
+$undup(\bot,j) = (\bot , j)$
+
+$undup(\top,j) = (\top, j)$
+
+$undup(x_i,j) = 	(x_i, j)$
+
+\subsubsection*{Induktions Fälle}
+
+
+Funktoren, Relationen, Äquivalenz) 
+
+\hfill
+
+Falls $\varphi = r(t_0,...,t_{n-1})$ mit r Relation, Funktion oder $\dot=$ 
+
+Es sei $(j_i,t^\prime_i) = \begin{cases}
+	undup(j,t_0) \textit{ , für } i=0 \\
+	undup(j_{i-1},t_i) , sonst
+\end{cases}$
+
+$undup(\varphi,j) = (r(t^\prime_0,...t^\prime_{n-1}),j_{n-1})$
+
+\hfill
+
+Quantoren)
+
+\hfill
+
+Assume $\varphi = \forall x_i \psi$
+
+$undup(\varphi, j) = 	(\forall x_{j+1} \psi^\prime , j^\prime),  where (\psi^\prime,j^\prime) = undup(\psi\{x_i \mapsto x_{j+1}\},j+1)$
+
+Assume $\varphi = \exists x_i \psi$
+
+$undup(\varphi, j) = 	(\exists x_{j+1} \psi^\prime , j^\prime),  where (\psi^\prime,j^\prime) = undup(\psi\{x_i \mapsto x_{j+1}\},j+1)$
+
+
+

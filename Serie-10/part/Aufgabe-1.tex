@@ -2,44 +2,76 @@
 
 \subsection*{$\exists \exists$)}
 
-$\exists x_i \exists x_j \varphi \Dashv \vDash \exists x_j \exists x_i \varphi$\\
+$\exists x_i \exists x_j \varphi \Dashv \vDash \exists x_j \exists x_i \varphi$
+
+\hfill
 
 Sei $\varsigma$ die gegebene Signatur. Sei $A$ eine beliegige $\varsigma$-Struktur und $\beta$ eine beliebige $A$-Belegung.
 
-Dann gilt:\\
+Dann gilt:
 
-$A,\beta \vDash \exists x_i \exists x_j \varphi$ \\
+\hfill
 
-gdw. es gibt $a\in A$ mit $A,\beta [\frac{x_i}{a}]\vDash \exists x_j \varphi$ (Semantik $\exists $)\\
+$A,\beta \vDash \exists x_i \exists x_j \varphi$
 
-gdw. es gibt $b\in A$ und $a\in A$ mit $A,\beta [\frac{x_i}{a}][\frac{x_j}{b}]\vDash \varphi$ (Semantik $\exists$)\\
+\hfill
 
-gdw. es gilt für ein $b\in A$ mit $A,\beta [\frac{x_j}{b}]\vDash \exists x_i \varphi$ (Semantik $\exists$)\\
+gdw. es gibt $a\in A$ mit $A,\beta [\frac{x_i}{a}]\vDash \exists x_j \varphi$ (Semantik $\exists $)
+
+\hfill
+
+gdw. es gibt $b\in A$ und $a\in A$ mit $A,\beta [\frac{x_i}{a}][\frac{x_j}{b}]\vDash \varphi$ (Semantik $\exists$)
+
+\hfill
+
+gdw. es gilt für ein $b\in A$ mit $A,\beta [\frac{x_j}{b}]\vDash \exists x_i \varphi$ (Semantik $\exists$)
+
+\hfill
 
 gdw. es gilt für ein $b\in A$ mit $A,\beta \vDash \exists x_j \exists x_i \varphi$ (Semantik $\exists$) $\\\blacksquare$
 
 \subsection*{$\forall \forall$)}
 Sei $\varsigma$ die gegebene Signatur. Sei $A$ eine beliegige $\varsigma$-Struktur und $\beta$ eine beliebige $A$-Belegung.
 
-Dann gilt:\\
+Dann gilt:
 
-$A,\beta \vDash \forall x_i \forall x_j \varphi$\\ 
+\hfill
 
-gdw. es gilt für alle $a\in A$, dass $A,\beta[\frac{x_i}{a}] \vDash \forall x_j \varphi$ (Semantik $\forall$)\\
+$A,\beta \vDash \forall x_i \forall x_j \varphi$
 
-gdw. es gilt für alle $a\in A$ und für alle $b \in A$, dass $A,\beta[\frac{x_i}{a}][\frac{x_j}{b}] \vDash \varphi$ (Semantik $\forall$)\\
+\hfill
 
-gdw. es gilt für alle $b \in A$, dass $A,\beta[\frac{x_j}{b}] \vDash \forall x_i \varphi$ (Semantik $\forall$)\\
+gdw. es gilt für alle $a\in A$, dass $A,\beta[\frac{x_i}{a}] \vDash \forall x_j \varphi$ (Semantik $\forall$)
 
-gdw. es gilt dass $A,\beta \vDash \forall x_j \forall x_i \varphi$ (Semantik $\forall$)\\
+\hfill
+
+gdw. es gilt für alle $a\in A$ und für alle $b \in A$, dass $A,\beta[\frac{x_i}{a}][\frac{x_j}{b}] \vDash \varphi$ (Semantik $\forall$)
+
+\hfill
+
+gdw. es gilt für alle $b \in A$, dass $A,\beta[\frac{x_j}{b}] \vDash \forall x_i \varphi$ (Semantik $\forall$)
+
+\hfill
+
+gdw. es gilt dass $A,\beta \vDash \forall x_j \forall x_i \varphi$ (Semantik $\forall$)
+
+\hfill
+
 $\blacksquare$
 
 \subsection*{$\exists \forall$)}
-Sei $\varsigma=\{\leq/2\}$ Signatur $A$ eine $\varsigma$-Struktur mit\\ $A:$\\
-$\mathcal{A}=\mathbb{N}$\\
- $\leq^A =  \leq$ auf den natürlichen Zahlen\\
-\\
- und sei $\varphi = (x_0 \leq x_1)$ dann gilt:\\
+Sei $\varsigma=\{\leq/2\}$ Signatur $A$ eine $\varsigma$-Struktur mit
+
+$A:$
+
+$\mathcal{A}=\mathbb{N}$
+
+$\leq^A =  \leq$ auf den natürlichen Zahlen
+
+\hfill
+
+und sei $\varphi = (x_0 \leq x_1)$ dann gilt:
+ 
 $\forall x_0 \exists x_1 \varphi$ aber $\exists x_1 \forall x_0 \varphi$ gilt nicht. 
  
 

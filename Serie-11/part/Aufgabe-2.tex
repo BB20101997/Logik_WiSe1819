@@ -1,3 +1,19 @@
-\section*{Aufgabe N}
+\section*{Aufgabe 2}
 
-\subsection*{a)}
+\subsection*{1.)}
+
+Sei $K_1$ die Klasse der Strukturen, bei denen die Teilmenge einelementig ist.
+Sei $\varphi_0 = \forall x_0 \forall x_1 ( (r(x_0) \wedge r(x_1)) \mapsto (x_0 \doteq x_1) )$ und sei $\varphi_1 = \exists x_0 r(x_0)$. Damit gilt $Mod(\{ \varphi_0 , \varphi_1 \})=K_1 $. Da leere Mengen $\varphi_1$ nicht erfüllen und Teilmengen die mehr als ein Element haben $\varphi_0$ nicht erfüllen, jedoch 1 elementige Mengen $\varphi_0$ und $\varphi_1$ erfüllen. Somit ist $K_1$ endlich axiomatisierbar.
+
+
+\subsection*{2.)}
+Sei $K_2$ die Klasse der Strukturen, bei denen die Teilmenge unendlich ist.
+$K_2$ ist nicht axiomatisierbar.
+
+\subsection*{3.)}
+Sei $K_3$ die Klasse der Strukturen, bei denen die Teilmenge mindesteins ein Element, aber nicht alle Elemente enthält. Sei $\varphi_0 = \exists x_0 r(x_0)$ und sei $\varphi_1 = \exists x_0 \neg r(x_0)$. Dann gilt $Mod(\{ \varphi_0 , \varphi_ 1 \})= K_3$, da Mengen die weniger als 1einElement enthalten $\varphi_0$ nicht erfüllen und Mengen die alle Elemente enthalten $\varphi_1$ nicht erfüllen. Somit ist $K_3$ endlich axiomatisierbar.
+
+\subsection*{Signatur $S'={e/2}$}
+
+Sei $K'$ die Klasse der Strukturen in denen $e$ eine Äquivalenzrelation ist.
+ Sei $\varphi_0 = \forall x_0 e(x_0,x_0)$ und $\varphi_1=\forall x_0 \forall x_1 e(x_0,x_1) \mapsto e(x_1,x_0)$ und $\varphi_2= \forall x_0 \forall x_1 \forall x_2 ((e(x_0,x_1)\wedge e(x_1,x_2))\mapsto(e(x_0,x_2)))$. Dann gilt $Mod(\{ \varphi_0, \varphi_1, \varphi_2\})=K'$ da wenn e äquivalenzrelation ist die Eigenschaften der Symmetrie, Reflexivität und Transitivität erfüllen muss. Symmetrie ist genau dann erfüllt wenn $\varphi_0$ erfüllt ist. Reflexivität ist genau dann erfüllt wenn $\varphi_1$ erfüllt ist und Transitivität ist genau dann erfüllt wenn $\varphi_2$ erfüllt ist. Somit ist $K'$ endlich axiomatisierbar.

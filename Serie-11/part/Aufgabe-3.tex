@@ -1,3 +1,57 @@
-\section*{Aufgabe N}
+\section*{Aufgabe 3}
 
-\subsection*{a)}
+\subsection*{\mbox{Definitionne von Relationen in $\mathcal{S}$-Strukturen (Gerichteter Graphen)}}
+
+\subsubsection*{Es gibt eine Kannte von $x_1$ nach $x_0$}
+ 
+$\Sigma(\varphi) = 2$
+
+$\varphi(x_1,x_0) = e(x_1,x_0)$
+
+\subsubsection*{Der Knoten $x_0$ ist ein Knoten ohne Eingangskanten}
+$\Sigma(\varphi) = 1$
+
+$\varphi(x_0) = \forall x_1: \neg e(x_1,x_0)$
+
+\subsubsection*{Ausgehend von Knoten $x_0$ kommt man in höchstens zwei Schritten zu jedem anderen Knoten}
+$\Sigma(\varphi) = 1$
+
+$\varphi(x_0) = \forall x_1: \exists x_2: (x_1 \dot{=} x_0 \vee e(x_0,x_1) \vee (e(x_0,x_2) \wedge e(x_2,x_1)))$
+
+\subsection*{\mbox{Definitionne von Relationen in natürlichen Zahlen}}
+
+\subsubsection*{Die Zahlen $x_0$, $x_1$ und $x_2$ bilden ein pythagoreisches Tripel}
+$\Sigma(\varphi) = 3$
+
+$\varphi(x_0,x_1,x_2) = \\
++(\cdot(x_0,x_0),\cdot(x_1,x_1)) \dot{=} \cdot(x_2,x_2) \vee \\
++(\cdot(x_0,x_0),\cdot(x_2,x_2)) \dot{=} \cdot(x_1,x_1) \vee \\
++(\cdot(x_2,x_2),\cdot(x_1,x_1)) \dot{=} \cdot(x_0,x_0)	
+$
+
+\subsubsection*{Die Zahlen $x_0$, $x_1$ sind Primzahlzwillinge}
+$\Sigma(\varphi) = 2$
+
+$\varphi(x_0,x_1) = \\
+(x_0 \dot{=} +(x_1,+(1,1)) \vee x_1 \dot{=} +(x_0,+(1,1)) \wedge \\
+(\forall x_2: x_2 \dot{=} x_0 \vee x_2 \dot{=} 1 \vee (\forall x_3:\neg (\cdot(x_2,x_3) \dot{=} x_0) )) \wedge \\
+(\forall x_2: x_2 \dot{=} x_1 \vee x_2 \dot{=} 1 \vee (\forall x_3:\neg (\cdot(x_2,x_3) \dot{=} x_1) )) 
+$
+
+\clearpage
+
+
+\subsubsection*{Die Zahlen $x_0$ ist eine gerade zahl auf die die Goldbachsche Vermutung zutrifft}
+
+$\Sigma(\varphi) = 1$
+
+$\varphi(x_0) = \\
+(\exists x_1: \cdot(+(1,1),x_1) \dot{=} x_0) \wedge \\
+(\exists x_2, x_3 : +(x_2,x_3) \dot{=} x_0 \wedge \\
+(\forall x_4: x_4 \dot{=} x_2 \vee x_4 \dot{=} 1 \vee (\forall x_5:\neg (\cdot(x_4,x_5) \dot{=} x_2) )) \wedge \\
+(\forall x_4: x_4 \dot{=} x_3 \vee x_4 \dot{=} 1 \vee (\forall x_5:\neg (\cdot(x_4,x_5) \dot{=} x_3) )) 
+)
+$
+
+
+

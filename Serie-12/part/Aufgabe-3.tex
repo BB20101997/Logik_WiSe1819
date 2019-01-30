@@ -1,3 +1,49 @@
-\section*{Aufgabe N}
+\section*{Aufgabe 3}
 
-\subsection*{a)}
+\subsection*{Erste Formel in PNF umwandeln)}
+
+
+\begin{lstlisting}
+$\forall x_1 \exists x_2 (\neg e(x_1,x_2)) \rightarrow (\forall x_1 \exists x_2 z(x_1,x_2,x_0)\wedge \forall x_1 z(x_0,x_1,x_1))$
+$\Dashv \vDash$ $\forall x_1 \exists x_2 (\neg e(x_1,x_2)) \rightarrow (\forall x_1 (\exists x_2 z(x_1,x_2,x_0) \wedge z(x_0 ,x_1 ,x_1 ))) $ 
+: Distributivity (6)
+$\Dashv \vDash$ $\forall x_1 \exists x_2 (\neg e(x_1,x_2)) \rightarrow (\forall x_3 (\exists x_2 z(x_3,x_2,x_0) \wedge z(x_0 ,x_3 ,x_3 ))) $ 
+: Renaming of bound variables (10)
+$\Dashv \vDash$ $\forall x_1 \exists x_2 (\neg e(x_1,x_2)) \rightarrow (\forall x_3 (\exists x_4 z(x_3,x_4,x_0) \wedge z(x_0 ,x_3 ,x_3 ))) $ 
+: Renaming of bound variables (10)
+$\Dashv \vDash$ $\forall x_1 \exists x_2 (\neg e(x_1,x_2)) \rightarrow (\forall x_3 \exists x_4 (z(x_3,x_4,x_0) \wedge z(x_0 ,x_3 ,x_3 ))) $ 
+: Shift (9)
+$\Dashv \vDash$ $\forall x_1 \exists x_2 (\neg\neg e(x_1,x_2)) \vee (\forall x_3 \exists x_4 (z(x_3,x_4,x_0) \wedge z(x_0 ,x_3 ,x_3 ))) $ 
+: rew$\rightarrow$
+$\Dashv \vDash$ $\forall x_1 \exists x_2 (e(x_1,x_2)) \vee (\forall x_3 \exists x_4 (z(x_3,x_4,x_0) \wedge z(x_0 ,x_3 ,x_3 ))) $ 
+: done (Double Negation)
+$\Dashv \vDash$ $\forall x_1 \exists x_2 e(x_1,x_2) \vee \forall x_3 \exists x_4 (z(x_3,x_4,x_0) \wedge z(x_0 ,x_3 ,x_3 )) $ 
+: 
+$\Dashv \vDash$ $\forall x_1 (\exists x_2 e(x_1,x_2) \vee \forall x_3 \exists x_4 (z(x_3,x_4,x_0) \wedge z(x_0 ,x_3 ,x_3 ))) $ 
+: Shift (9)
+$\Dashv \vDash$ $\forall x_1 \exists x_2 (e(x_1,x_2) \vee \forall x_3 \exists x_4 (z(x_3,x_4,x_0) \wedge z(x_0 ,x_3 ,x_3 ))) $ 
+: Shift (9)
+$\Dashv \vDash$ $\forall x_1 \exists x_2 \forall x_3 (e(x_1,x_2) \vee \exists x_4 (z(x_3,x_4,x_0) \wedge z(x_0 ,x_3 ,x_3 ))) $ 
+: Shift (9)
+$\Dashv \vDash$ $\forall x_1 \exists x_2 \forall x_3 \exists x_4 (e(x_1,x_2) \vee (z(x_3,x_4,x_0) \wedge z(x_0 ,x_3 ,x_3 ))) $ 
+: Shift (9)
+\end{lstlisting}
+
+\subsection*{Zweite Formel in PNF umwandeln)}
+
+\begin{lstlisting}
+$\forall x_1(r(x1,x1)\leftrightarrow s(x_1)) \wedge \forall x_1 \neg s(x_1)$
+$\Dashv \vDash$ $\forall x_1 ((r(x1,x1)\leftrightarrow s(x_1)) \wedge \neg s(x_1))$
+: Distributivity (6)
+\end{lstlisting}
+
+\subsection*{Zweite Formel in KNF umwandeln)}
+
+\begin{lstlisting}
+$\forall x_1 ((r(x1,x1)\leftrightarrow s(x_1)) \wedge \neg s(x_1))$
+$\Dashv \vDash$ $\forall x_1 (((\neg r(x1,x1) \vee s(x_1)) \wedge (r(x1,x1) \vee \neg s(x_1))) \wedge \neg s(x_1))$ : rew$\leftrightarrow$
+$\Dashv \vDash$ $\forall x_1 ((\neg r(x1,x1) \vee s(x_1)) \wedge (r(x1,x1) \vee \neg s(x_1)) \wedge \neg s(x_1))$ : ass 
+$\Dashv \vDash$  $\forall x_1(\neg r(x1,x1) \vee s(x_1)) \wedge \forall x_1(r(x1,x1) \vee \neg s(x_1)) \wedge \forall x_1 \neg s(x_1)$
+: Distributivity (6)
+
+\end{lstlisting}

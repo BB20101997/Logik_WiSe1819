@@ -1,3 +1,49 @@
-\section*{Aufgabe N}
+\section*{Aufgabe 1}
 
-\subsection*{a)}
+\subsection*{Erste Folgerung}
+
+$\forall x_0 (p(x_0) \rightarrow \exists x_1 q(x_0, f(x_1))), p(a) \vDash \exists x_0 q(x_0, f(a))$ Gilt nicht da für $\varsigma = \{a,p/1, q/2, f//1 \}$ $\texttt{A}=$\\
+$A=\mathbb{N} \cup \{0\}$ (Natürliche Zahlen mit Null)\\
+$a=1$\\
+$p^A =  \mathbb{N} \setminus \{0\}$ (Natürliche Zahlen ohne Null) \\
+$q^A = <x,x>$ für alle $x\in \mathbb{N}\setminus \{0\}$\\
+$f^A(x) = x-1$\\
+
+Nun gilt für $\texttt{A}$, dass $\forall x_0 (p(x_0) \rightarrow \exists x_1 q(x_0, f(x_1)))$ gilt und $ p(a)$ gilt. Aber $\exists x_0 q(x_0,f(a))$ gilt nicht da $f(a)=0$ und $q(x_0,0) \not \in q^A$
+
+\subsection*{Zweite Folgerung}
+
+$\forall x_0 (p(x_0) \rightarrow \exists x_1 q(x_0, f(x_1))), p(a) \vDash \forall x_0 q(x_0, f(a))$ Gilt nicht für $\varsigma = \{a,p/1, q/2, f//1 \}$ und $\texttt{A}=$\\
+$A=\mathbb{N} \cup \{0\}$ (Natürliche Zahlen mit Null)\\
+$a=1$\\
+$p^A =  \mathbb{N} \setminus \{0\}$ (Natürliche Zahlen ohne Null) \\
+$q^A = <x,x>$ für alle $x\in \mathbb{N}\setminus \{0\}$\\
+$f^A(x) = x-1$\\
+
+Nun gilt für $\texttt{A}$, dass $\forall x_0 (p(x_0) \rightarrow \exists x_1 q(x_0, f(x_1)))$ gilt und $ p(a)$ gilt. Aber $\forall x_0 q(x_0,f(a))$ gilt nicht da $f(a)=0$ und $q(x_0,0) \not \in q^A$
+
+\subsection*{Dritte Folgerung}
+
+$s(x_0) \rightarrow \forall x_1 r(x_1 , x_1), s(x_0) \vDash \exists x_1 \forall x_2 r(x_1,x_2)$ gilt nicht für $\varsigma = \{,s/1, r/2 \}$ und  $\texttt{A}=$\\
+$A=\{0,1\}$\\
+$s^A= \{0,1\}$\\
+$r^A=\{<0,0>,<1,1>\}$\\
+
+
+Nun gilt für $\texttt{A}$, dass $s(x_0) \rightarrow \forall x_1 r(x_1 , x_1)$ und $ s(x_0)$ für ein $x_0$ gelten, da $s$ allgemeingültig und $\forall x_1 r(x_1 , x_1)$ allgemeingültig in $\texttt{A}$ sind. Nun gilt aber sowohl für $0$ als auch $1$, dass $\forall x_2r(0,x_2)$ beziehungsweise  $\forall x_2r(1,x_2)$ nicht, sodass $\exists x_1 \forall x_2 r(x_1,x_2)$ nicht erfüllbar ist.
+
+\subsection*{Vierte Folgerung}
+
+$s(x_0) \rightarrow \forall x_1 r(x_1 , x_1), s(x_0) \vDash \forall x_1 \exists x_2 r(x_1,x_2)$ ist eine Folgerung da,
+
+\begin{lstlisting}
+  1   $ s(x_0)$                premisse
+  2   $s(x_0) \rightarrow \forall x_1 r(x_1 , x_1)$ premisse 
+  3   $\forall x_1 r(x_1 , x_1)$    ($ \rightarrow .e$) mit 1 und 2
+  4.0 $x_2$               neue Variable
+  4.1 $x_2 \doteq x_1$         annahme
+  4.2 $r(x_1 , x_1)$       ($\forall e$) mit 3
+  4.3 $r(x_1, x_2)$    ($\doteq e$)  auf $r(x_3,x_3)$mit $x_3$  4.2 und 4.1      
+  5   $\exists x_2 r(x_1, x_2)$ ($\exists i$) mit 4 und $x_2$
+  6 $\forall x_1 \exists x_2 r(x_1, x_2)$ ($\forall i$) mit 5 und 3
+\end{lstlisting}

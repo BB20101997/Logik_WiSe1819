@@ -1,3 +1,19 @@
-\section*{Aufgabe N}
+\section*{Aufgabe 2}
 
-\subsection*{a)}
+Sein $\phi_0$ und $\phi_1$ Formeln mit $fvars(\exists x_0 \forall x_1 \phi_0) \cap \{x_2,x_3\} = \emptyset$ ,
+
+sowie $fvars(\forall x_2 \exists x_3 \phi_1) \cap \{x_0, x_1 \} = \emptyset.$
+
+Dann gilt:
+\begin{lstlisting}
+$\exists x_0 \forall x_1 \phi_0  \wedge \forall x_2 \exists x_3 \phi_1$
+$\Dashv \vDash$	$\exists x_0 (\forall x_1 \phi_0  \wedge \forall x_2 \exists x_3 \phi_1)$ 
+: Shift (9) mit $* = \wedge$, $Q = \exists, i=0, \varphi_0 = \forall x_2 \exists x_3 \phi_1$ und $\varphi_1 = \forall x_1 \phi_0$
+$\Dashv \vDash$	$\exists x_0 \forall x_2  (\forall x_1 \phi_0  \wedge \exists x_3 \phi_1)$ 
+: Shift (9) mit $* = \wedge$, $Q = \forall, i=2,\varphi_1 = \exists x_3 \phi_1$ und $\varphi_0 = \forall x_1 \phi_0$
+$\Dashv \vDash$	$\exists x_0 \forall x_2 \exists x_3 (\forall x_1 \phi_0  \wedge \phi_1)$ 
+: Shift (9) mit $* = \wedge$, $Q = \exists, i=3,\varphi_1 = \phi_1$ und $\varphi_0 = \forall x_1 \phi_0$
+$\Dashv \vDash$	$\exists x_0 \forall x_2 \exists x_3 \forall x_1 ( \phi_0  \wedge \phi_1)$ 
+: Shift (9) mit $* = \wedge$, $Q = \forall, i=1,\varphi_0 = \phi_1$ und $\varphi_1 = \phi_0$
+\end{lstlisting}
+
